@@ -1,0 +1,57 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableHeader {
+    background-color: #057662;   
+    color: white;
+}
+.tableHeader .number, .tdLifestyle, .tdKepatuhan{
+    padding: 0 8px;
+}
+table tr {
+    border-bottom: 1px solid #8BEAFF;
+}
+table tr.tableHeader {
+    border-bottom: 0;
+}
+th {
+    padding: 16px 0;
+}
+table th:first-child{
+    border-radius:10px 0 0 10px;
+}
+
+table th:last-child{
+    border-radius:0 10px 10px 0;
+}
+.textCenter {
+    text-align: center;
+}
+.tdAksi {
+    width: fit-content;
+}
+.tdLifestyle, .tdKepatuhan {
+    width: 1%;
+}
+table tr td {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.btn {
+    color: white;
+    font-weight: bold;
+}
+.btn-detail {
+    background-color: #8BEAFF;
+}
+
+.btn-edit {
+    background-color: #00D8B1;
+}
+
+.btn-hapus {
+    background-color: #FF2727;
+}
