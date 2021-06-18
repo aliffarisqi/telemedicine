@@ -3,9 +3,9 @@
 <?= $this->section('content'); ?>
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col dashboard-content">
             <h1>SIP</h1>
-            <table>
+            <table class="table-dashboard">
                 <tr class="tableHeader">
                     <th class="number textCenter">No</th>
                     <th>Nama</th>

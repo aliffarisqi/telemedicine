@@ -1,5 +1,5 @@
 .body-landing {
-    background-image: url('/img/bg_landing-page.png');
-    position: static;
-    background-size: 100%;
+  background-image: url("/img/bg_landing-page.png");
+  position: static;
+  background-size: 100%;
 }

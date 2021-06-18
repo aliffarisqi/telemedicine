@@ -1,0 +1,50 @@
+.profile-page-detail {
+  border-radius: 100%;
+  max-width: 150px;
+}
+.right-side-detail {
+  background-color: rgba(240, 240, 240, 0.7);
+  padding-top: 20px;
+}
+.data-pasien-detail h5,
+.data-pasien-detail p {
+  font-size: 16px;
+  color: rgb(99, 99, 99);
+}
+.title-monitoring-detail {
+  font-size: 20px;
+  color: rgb(99, 99, 99);
+}
+.btn-lainya {
+  background-color: #51dfff;
+  width: 120px;
+  margin: auto;
+}
+.btn-hasil-grafik {
+  background-color: #51dfff;
+  width: 120px;
+}
+.btn-tambah-analisis {
+  background-color: rgb(5, 118, 98, 0.85);
+  border-radius: 100%;
+}
+.btn-lifestyle {
+  background-color: rgba(247, 122, 6, 0.877);
+  width: 120px;
+  margin: auto;
+}
+.bg-grafik-detail {
+  background-color: white;
+  border-radius: 10px;
+}
+.bg-analisis-rekomendasi {
+  background-color: white;
+  border-radius: 10px;
+}
+.header-card-analisis {
+  background-color: #51dfff;
+}
+.title-analisis-rekomendasi h5 {
+  color: rgb(99, 99, 99);
+  font-size: 18px;
+}
