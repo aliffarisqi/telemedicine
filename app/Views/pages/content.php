@@ -14,7 +14,7 @@
                         <h2>13</h2>
                         <p>Kepatuhan</p>
                     </div>
-                    <button class="btn btn-ls">Full</button>
+                    <button class="btn btn-add-red">Tambah</button>
                 </div>
                 <button class="btn btn-ls"><a id="nonelink" href="<?= base_url('/content/#'); ?>">Lihat Pertanyaan >></a></button>
             </div>
@@ -26,13 +26,25 @@
                 <div class="kep-right">
                     <div>
                         <h2>13</h2>
-                        <p>Kepatuhan</p>
+                        <p>Pertanyaan</p>
                     </div>
-                    <button class="btn btn-ls">Full</button>
+                    <button class="btn btn-add-red">Tambah</button>
                 </div>
                 <button class="btn btn-kep"><a id="nonelink" href="<?= base_url('/content/#'); ?>">Lihat Pertanyaan >></a></button>
             </div>
-            <div class="grid-item content-tele-edu">Konten Edukasi</div>
+            <div class="grid-item content-tele-edu">
+                <div class="content-edu-header">
+                    <div>
+                        <h1>Konten Edukasi</h1>
+                    </div>
+                    <div>
+                        <button class="btn btn-orange">Tambah Konten</button>
+                    </div>
+                </div>
+                <div>
+                    BAbaa
+                </div>
+            </div>
         </div>
     </div>
 </div>
