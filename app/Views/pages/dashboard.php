@@ -4,8 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col dashboard-content">
-            <h1>SIP</h1>
-            <table class="table-dashboard">
+            <table class="table-dashboard mt-5 shadow-sm">
                 <tr class="tableHeader">
                     <th class="number textCenter">No</th>
                     <th>Nama</th>

@@ -3,9 +3,9 @@
 <?= $this->section('content'); ?>
 <div class="container">
     <!-- isi detail -->
-    <div class="row mt-5 pr-4">
+    <div class="row mt-5">
         <!-- left side profile -->
-        <div class="col-3 text-center">
+        <div class="col-sm-3 text-center left-side-profile">
             <!-- image profile -->
             <div class="row">
                 <div class="col">
@@ -31,7 +31,7 @@
             </div>
         </div>
         <!-- right side monitoring -->
-        <div class="col-9 right-side-detail">
+        <div class="col-lg right-side-detail">
             <!-- header -->
             <div class="row m-3">
                 <div class="col title-monitoring-detail ">
@@ -44,7 +44,9 @@
             <!-- card grafik -->
             <div class="row mr-3 ml-3">
                 <div class="col bg-grafik-detail p-3">
-                    <h5>grafik</h5>
+                    <div id="grafik_tekanan_darah">
+
+                    </div>
                 </div>
             </div>
             <!-- analisis rekomendasi -->
@@ -83,4 +85,62 @@
         </div>
     </div>
 </div>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script>
+    Highcharts.chart('grafik_tekanan_darah', {
+        chart: {
+            type: 'area'
+        },
+        title: {
+            text: 'Historic and Estimated Worldwide Population Growth by Region'
+        },
+        subtitle: {
+            text: 'Source: Wikipedia.org'
+        },
+        xAxis: {
+            categories: ['1750', '1800', '1850', '1900', '1950', '1999', '2050'],
+            tickmarkPlacement: 'on',
+            title: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Billions'
+            },
+            labels: {
+                formatter: function() {
+                    return this.value / 1000;
+                }
+            }
+        },
+        tooltip: {
+            split: true,
+            valueSuffix: ' millions'
+        },
+        plotOptions: {
+            area: {
+                stacking: 'normal',
+                lineColor: '#666666',
+                lineWidth: 1,
+                marker: {
+                    lineWidth: 1,
+                    lineColor: '#666666'
+                }
+            }
+        },
+        series: [{
+            name: 'Asia',
+            data: [502, 635, 809, 947, 1402, 3634, 5268]
+        }, {
+            name: 'America',
+            data: [18, 31, 54, 156, 339, 818, 1201]
+        }]
+    });
+</script>
+
 <?= $this->endSection(); ?>

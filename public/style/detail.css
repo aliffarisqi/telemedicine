@@ -48,3 +48,10 @@
   color: rgb(99, 99, 99);
   font-size: 18px;
 }
+@media (max-width: 442px) {
+  .right-side-detail {
+  }
+  .btn-hasil-grafik {
+    float: left;
+  }
+}
