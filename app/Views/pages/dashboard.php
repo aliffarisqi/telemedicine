@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col dashboard-content">
-            <table class="table-dashboard mt-5 shadow-sm">
+            <table class="table-dashboard mt-5">
                 <tr class="tableHeader">
                     <th class="number textCenter">No</th>
                     <th>Nama</th>

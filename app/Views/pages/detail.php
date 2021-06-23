@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 <div class="container">
     <!-- isi detail -->
-    <div class="row mt-5">
+    <div class="row pt-5 pr-2 shadow-sm">
         <!-- left side profile -->
         <div class="col-sm-3 text-center left-side-profile">
             <!-- image profile -->
@@ -31,7 +31,7 @@
             </div>
         </div>
         <!-- right side monitoring -->
-        <div class="col-lg right-side-detail">
+        <div class="col-lg-9 right-side-detail">
             <!-- header -->
             <div class="row m-3">
                 <div class="col title-monitoring-detail ">
@@ -86,23 +86,23 @@
     </div>
 </div>
 
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="/grafik/highcharts.js"></script>
+<script src="/grafik/exporting.js"></script>
+<script src="/grafik/export-data.js"></script>
+<script src="/grafik/accessibility.js"></script>
 <script>
     Highcharts.chart('grafik_tekanan_darah', {
         chart: {
             type: 'area'
         },
         title: {
-            text: 'Historic and Estimated Worldwide Population Growth by Region'
+            text: 'Data Tekanan Darah Pasien Selama Satu Minggu'
         },
         subtitle: {
             text: 'Source: Wikipedia.org'
         },
         xAxis: {
-            categories: ['1750', '1800', '1850', '1900', '1950', '1999', '2050'],
+            categories: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
@@ -120,7 +120,7 @@
         },
         tooltip: {
             split: true,
-            valueSuffix: ' millions'
+            valueSuffix: 'millions'
         },
         plotOptions: {
             area: {
@@ -135,7 +135,7 @@
         },
         series: [{
             name: 'Asia',
-            data: [502, 635, 809, 947, 1402, 3634, 5268]
+            data: [90, 100, 98, 92, 85, 102, 120]
         }, {
             name: 'America',
             data: [18, 31, 54, 156, 339, 818, 1201]
