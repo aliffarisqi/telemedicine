@@ -3,8 +3,28 @@
 <?= $this->section('content'); ?>
 <div class="container">
     <div class="row">
-        <div class="col dashboard-content">
-            <table class="table-dashboard mt-5">
+        <div class="col dashboard-content mt-5">
+            <!-- Form Search -->
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <form class="form-group mb-3">
+                        <div class="row">
+                            <div class="col">
+                                <input class="form-control form-search" type="search" placeholder="Search">
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-search float-left" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4 ">
+                    <a href="" class="btn btn-kirim-pesan float-right">Kirim Pesan</a>
+                </div>
+            </div>
+
+            <table class="table-dashboard">
                 <tr class="tableHeader">
                     <th class="number textCenter">No</th>
                     <th>Nama</th>

@@ -92,54 +92,54 @@
 <script src="/grafik/accessibility.js"></script>
 <script>
     Highcharts.chart('grafik_tekanan_darah', {
-        chart: {
-            type: 'area'
-        },
+
         title: {
-            text: 'Data Tekanan Darah Pasien Selama Satu Minggu'
+            text: 'Data Tekanan Darah'
         },
+
         subtitle: {
-            text: 'Source: Wikipedia.org'
+            text: 'ady pharm'
         },
-        xAxis: {
-            categories: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'],
-            tickmarkPlacement: 'on',
-            title: {
-                enabled: false
-            }
-        },
+
         yAxis: {
             title: {
-                text: 'Billions'
-            },
-            labels: {
-                formatter: function() {
-                    return this.value / 1000;
-                }
+                text: 'Tekanan Darah'
             }
         },
-        tooltip: {
-            split: true,
-            valueSuffix: 'millions'
+
+        xAxis: {
+            categories: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu']
         },
-        plotOptions: {
-            area: {
-                stacking: 'normal',
-                lineColor: '#666666',
-                lineWidth: 1,
-                marker: {
-                    lineWidth: 1,
-                    lineColor: '#666666'
-                }
-            }
+
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
         },
+
         series: [{
-            name: 'Asia',
-            data: [90, 100, 98, 92, 85, 102, 120]
+            name: 'Sistolsik',
+            data: [90, 90, 85, 105, 110, 100, 120]
         }, {
-            name: 'America',
-            data: [18, 31, 54, 156, 339, 818, 1201]
-        }]
+            name: 'Diastolsik',
+            data: [105, 90, 85, 90, 115, 120, 95]
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
     });
 </script>
 

@@ -64,3 +64,15 @@ table tr td {
   box-shadow: 2px 2px 15px, rgba(0, 0, 0, 0.76);
   padding: 10px;
 }
+
+/* Form search  */
+.btn-search {
+  background-color: #057662;
+}
+.form-search {
+  background-color: #fafafa;
+  max-width: 300px;
+}
+.btn-kirim-pesan {
+  background-color: #057662;
+}
