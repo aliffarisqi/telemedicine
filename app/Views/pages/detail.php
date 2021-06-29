@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 <div class="container">
     <!-- isi detail -->
-    <div class="row pt-5 pr-2 shadow-sm">
+    <div class="row pt-5 pr-2 pb-5 shadow-sm">
         <!-- left side profile -->
         <div class="col-sm-3 text-center left-side-profile">
             <!-- image profile -->
@@ -24,14 +24,15 @@
                 </div>
             </div>
             <div class="row m-2">
-                <a href="" class="btn btn-lainya">Lainya</a>
+                <!-- Button trigger modal detail data pasien-->
+                <a href="" class="btn btn-lainya" data-toggle="modal" data-target="#exampleModal">Lainya</a>
             </div>
             <div class="row m-2">
                 <a href="" class="btn btn-lifestyle">Lifestyle</a>
             </div>
         </div>
         <!-- right side monitoring -->
-        <div class="col-lg-9 right-side-detail">
+        <div class="col-lg-9 right-side-detail pb-2">
             <!-- header -->
             <div class="row m-3">
                 <div class="col title-monitoring-detail ">
@@ -86,6 +87,77 @@
     </div>
 </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-danger mt-2 mr-2 float-right close-data-detail-pasien" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-9">
+                    <h5 class="judul-detail-data-pasien pb-2">Biodata</h5>
+                </div>
+            </div>
+            <div class="modal-body pb-0">
+                <div class="row justify-content-center">
+                    <div class="col-9 shadow-sm">
+                        <table class="table table-borderless tabel-data-detail-pasien">
+                            <tbody>
+                                <tr>
+                                    <td>Nama</td>
+                                    <td>: Khusniah Arief</td>
+                                </tr>
+                                <tr>
+                                    <td>Usia</td>
+                                    <td>: 19 Tahun</td>
+                                </tr>
+                                <tr>
+                                    <td>BB/TB</td>
+                                    <td>: 45/150</td>
+                                </tr>
+                                <tr>
+                                    <td>Alergi</td>
+                                    <td>: -</td>
+                                </tr>
+                                <tr>
+                                    <td>Riwayat Penyakit</td>
+                                    <td>: -</td>
+                                </tr>
+                                <tr>
+                                    <td>Riwayat Pengobatan</td>
+                                    <td>: -</td>
+                                </tr>
+                                <tr>
+                                    <td>Riwayat Diagnosa pengobatan</td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked disabled>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                < 1 Tahun </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" disabled>
+                                            <label class="form-check-label" for="exampleRadios2">
+                                                > 1 Tahun
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row card-header mt-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="/grafik/highcharts.js"></script>
 <script src="/grafik/exporting.js"></script>
 <script src="/grafik/export-data.js"></script>

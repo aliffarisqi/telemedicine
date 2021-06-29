@@ -48,6 +48,17 @@
   color: rgb(99, 99, 99);
   font-size: 18px;
 }
+.judul-detail-data-pasien {
+  border-bottom: 1px solid orange;
+  text-align: center;
+}
+.close-data-detail-pasien {
+  border-radius: 100%;
+}
+.tabel-data-detail-pasien tr {
+  padding: 0%;
+}
+
 @media (max-width: 442px) {
   .right-side-detail {
   }
