@@ -1,21 +1,22 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-
-<div class="container">
-    <div class="row mt-5 mb-4">
-        <div class="col-6">
-            <h4>Lifestyle</h4>
-        </div>
-        <div class="col-4">
+<div class="header-dashboard pt-4 pb-2 bg-white">
+    <div class="container">
+        <h5>Lifestyle</h5>
+    </div>
+</div>
+<div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
+    <div class="row mb-4 ">
+        <div class="col-9 pl-3">
             <div class="row m-0">
-                <p class="m-0"><b>Nama : Muchamad Ridho</b></p>
+                <p class="m-0 text-dark"><b>Nama : Muchamad Ridho</b></p>
             </div>
             <div class="row m-0">
-                <p class="m-0">Usia : 18 tahun</p>
+                <p class="m-0 text-dark">Usia : 18 tahun</p>
             </div>
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <div class="date-lifestyle ">
                 <p>15/04/2021</p>
             </div>
@@ -61,26 +62,154 @@
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Merokok</td>
+                            <td class="text-left">Merokok</td>
                             <td>ya</td>
                             <td>tidak</td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>Terpapar asap Rokok</td>
+                            <td class="text-left">Terpapar asap Rokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-left">Merokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-left">Terpapar asap Rokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-left">Merokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-left">Terpapar asap Rokok</td>
                             <td>ya</td>
                             <td>tidak</td>
                         </tr>
                     </tbody>
                 </table>
             <?php } elseif ($tabel == "pola makan") { ?>
-                <h5 class="card-title">Pola Makan</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <table class="table table-bordered">
+                    <thead class="tabel-data-lifestyle">
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Perilaku</th>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                            <th scope="col">5</th>
+                            <th scope="col">6</th>
+                            <th scope="col">7</th>
+                            <th scope="col">8</th>
+                            <th scope="col">9</th>
+                            <th scope="col">10</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-left">Merokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-left">Terpapar asap Rokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-left">Merokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-left">Terpapar asap Rokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-left">Merokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-left">Terpapar asap Rokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                    </tbody>
+                </table>
             <?php } else { ?>
-                <h5 class="card-title">Perilaku Olahraga</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <table class="table table-bordered">
+                    <thead class="tabel-data-lifestyle">
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Perilaku</th>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                            <th scope="col">5</th>
+                            <th scope="col">6</th>
+                            <th scope="col">7</th>
+                            <th scope="col">8</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-left">Merokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-left">Terpapar asap Rokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-left">Merokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-left">Terpapar asap Rokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-left">Merokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-left">Terpapar asap Rokok</td>
+                            <td>ya</td>
+                            <td>tidak</td>
+                        </tr>
+                    </tbody>
+                </table>
             <?php } ?>
         </div>
     </div>

@@ -1,9 +1,14 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-<div class="container">
+<div class="header-dashboard pt-4 pb-2 bg-white">
+    <div class="container">
+        <h5>Detail Data Pasien</h5>
+    </div>
+</div>
+<div class="container bg-white mt-4 p-4 mb-4">
     <!-- isi detail -->
-    <div class="row pt-5 pr-2 pb-5 shadow-sm">
+    <div class="row mt-2 pr-2 pb-4">
         <!-- left side profile -->
         <div class="col-sm-3 text-center left-side-profile">
             <!-- image profile -->
@@ -28,7 +33,7 @@
                 <a href="" class="btn btn-lainya" data-toggle="modal" data-target="#modalLainya">Lainya</a>
             </div>
             <div class="row m-2">
-                <a href="<?= base_url('/detail/lifestyle'); ?>" class="btn btn-lifestyle">Lifestyle</a>
+                <a href="<?= base_url('/detail/lifestyle/edukasiperilaku/2'); ?>" class="btn btn-lifestyle">Lifestyle</a>
             </div>
         </div>
         <!-- right side monitoring -->
@@ -37,9 +42,6 @@
             <div class="row m-3">
                 <div class="col title-monitoring-detail ">
                     <h4>Monitoring Pasien</h4>
-                </div>
-                <div class="col">
-                    <a href="" class="btn btn-hasil-grafik float-right">Hasil</a>
                 </div>
             </div>
             <!-- card grafik -->
@@ -64,7 +66,7 @@
 
                     <!-- card analisis rekomendasi -->
                     <div class="row pl-3 pr-3">
-                        <div class="card text-center mr-2" style="max-width: 18rem;">
+                        <div class="card text-center card-analisis-rekomendasi" style="max-width: 18rem;">
                             <div class="card-header header-card-analisis">
                                 21/02/13
                             </div>
@@ -72,7 +74,7 @@
                                 <p class="card-text">Perbanyak Minum Vitamin</p>
                             </div>
                         </div>
-                        <div class="card text-center" style="max-width: 18rem;">
+                        <div class="card text-center card-analisis-rekomendasi" style="max-width: 18rem;">
                             <div class="card-header header-card-analisis">
                                 21/02/13
                             </div>

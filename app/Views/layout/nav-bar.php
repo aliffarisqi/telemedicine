@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#">
             <h1>Telemedicine Monitoring</h1>
@@ -15,3 +15,4 @@
         </div>
     </div>
 </nav>
+<div class="mb-5"></div>

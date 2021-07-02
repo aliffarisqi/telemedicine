@@ -1,51 +1,107 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-<div class="container">
+<div class="header-dashboard pt-4 pb-2 bg-white">
+    <div class="container">
+        <h5>Konten</h5>
+    </div>
+</div>
+<div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
     <div class="row">
-        <div class="content-tele">
-            <div class="grid-item content-tele-ls">
-                <div class="ls-left">
-                    <img src="" alt="No Picture">
-                    <h1>Checklist Lifestyle</h1>
-                </div>
-                <div class="ls-right">
-                    <div>
-                        <h2>13</h2>
-                        <p>Kepatuhan</p>
+        <div class="col m-1">
+            <div class="card bg-primary text-white">
+                <div class="card-body p-2">
+                    <div class="row justify-content-center ">
+                        <div class="col-7 ">
+                            <div class="row p-2">
+                                <img src="/img/checklist.png" alt="" class="img-card-lifestyle">
+                            </div>
+                            <div class="row">
+                                <h4 class="card-title">Checklist Lifestyle</h4>
+                            </div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <h3 class="jumlah-pertanyaan m-0">20</h3>
+                            <h6 class="text-center m-0">Pertanyaan</h6>
+                            <a href="" class="btn btn-danger rounded m-2"><small> Tambah +</small></a>
+                        </div>
                     </div>
-                    <button class="btn btn-add-red">Tambah</button>
                 </div>
-                <button class="btn btn-ls"><a id="nonelink" href="<?= base_url('/content/#'); ?>">Lihat Pertanyaan >></a></button>
+                <a href="#" class="card-footer text-center text-white">Lihat Pertanyaan >></a>
             </div>
-            <div class="grid-item content-tele-kep">
-                <div class="kep-left">
-                    <img src="img/kepatuhan.png" alt="">
-                    <h1>Kepatuhan</h1>
-                </div>
-                <div class="kep-right">
-                    <div>
-                        <h2>13</h2>
-                        <p>Pertanyaan</p>
+        </div>
+        <div class="col m-1">
+            <div class="card bg-info text-white">
+                <div class="card-body p-2">
+                    <div class="row justify-content-center ">
+                        <div class="col-7 ">
+                            <div class="row p-2">
+                                <img src="/img/kepatuhan.png" alt="" class="img-card-kepatuhan">
+                            </div>
+                            <div class="row">
+                                <h4 class="card-title">Kepatuhan</h4>
+                            </div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <h3 class="jumlah-pertanyaan m-0">13</h3>
+                            <h6 class="text-center m-0">Pertanyaan</h6>
+                            <a href="" class="btn btn-danger rounded m-2"><small> Tambah +</small></a>
+                        </div>
                     </div>
-                    <button class="btn btn-add-red">Tambah</button>
                 </div>
-                <button class="btn btn-kep"><a id="nonelink" href="<?= base_url('/content/#'); ?>">Lihat Pertanyaan >></a></button>
+                <a href="#" class="card-footer text-center text-white">Lihat Pertanyaan >></a>
             </div>
-            <div class="grid-item content-tele-edu">
-                <div class="content-edu-header">
-                    <div>
-                        <h1>Konten Edukasi</h1>
-                    </div>
-                    <div>
-                        <button class="btn btn-orange">Tambah Konten</button>
+        </div>
+
+    </div>
+    <div class="row bg-light mt-4 ml-1 mr-1 rounded p-4">
+
+        <div class="col">
+            <h5 class="judul-konten-edukasi">Kontent Edukasi</h5>
+        </div>
+        <div class="col">
+            <a href="" class="btn btn-tambah-konten">Tambah Konten</a>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 mt-4">
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                 </div>
-                <div>
-                    BAbaa
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 </div>
 <?= $this->endSection(); ?>

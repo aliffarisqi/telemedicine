@@ -1,9 +1,14 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-<div class="container">
+<div class="header-dashboard pt-4 pb-2 bg-white">
+    <div class="container">
+        <h5>Dashboard</h5>
+    </div>
+</div>
+<div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
     <div class="row">
-        <div class="col dashboard-content mt-5">
+        <div class="col dashboard-content mt-2">
             <!-- Form Search -->
 
             <div class="row mb-4">
@@ -35,6 +40,30 @@
                     <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
                     <td class="textCenter">
                         <a href="<?= base_url('/detail/detail'); ?>"><button class="btn btn-detail">Detail</button></a>
+                        <button class="btn btn-edit">Edit</button>
+                        <button class="btn btn-hapus">Hapus</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="textCenter">2</td>
+                    <td>Qurrota Nastiti Rizqita Aura Syifa</td>
+                    <td>Hipertensi Komplikasi</td>
+                    <td class="textCenter"><input name="lifestyle" type="checkbox" disabled></td>
+                    <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
+                    <td class="textCenter">
+                        <button class="btn btn-detail">Detail</button>
+                        <button class="btn btn-edit">Edit</button>
+                        <button class="btn btn-hapus">Hapus</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="textCenter">2</td>
+                    <td>Qurrota Nastiti Rizqita Aura Syifa</td>
+                    <td>Hipertensi Komplikasi</td>
+                    <td class="textCenter"><input name="lifestyle" type="checkbox" disabled></td>
+                    <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
+                    <td class="textCenter">
+                        <button class="btn btn-detail">Detail</button>
                         <button class="btn btn-edit">Edit</button>
                         <button class="btn btn-hapus">Hapus</button>
                     </td>

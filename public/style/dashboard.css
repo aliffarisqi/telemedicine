@@ -76,3 +76,9 @@ table tr td {
 .btn-kirim-pesan {
   background-color: hsl(169, 92%, 24%);
 }
+body {
+  background-color: #eff3f8;
+}
+.header-dashboard h5 {
+  color: #747474;
+}

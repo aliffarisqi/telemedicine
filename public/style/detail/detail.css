@@ -22,6 +22,7 @@
 }
 .btn-lainya:hover {
   background-color: #2daafd;
+  color: white;
 }
 
 .btn-hasil-grafik {
@@ -29,8 +30,13 @@
   width: 120px;
 }
 .btn-tambah-analisis {
-  background-color: rgb(5, 118, 98, 0.85);
+  background-color: red;
+  color: white;
   border-radius: 100%;
+}
+.btn-tambah-analisis:hover {
+  background-color: rgb(165, 0, 0);
+  color: white;
 }
 .btn-lifestyle {
   background-color: rgba(247, 122, 6, 0.877);
@@ -38,7 +44,8 @@
   margin: auto;
 }
 .btn-lifestyle:hover {
-  background-color: rgb(223, 127, 3);
+  background-color: rgb(173, 98, 0);
+  color: white;
 }
 .bg-grafik-detail {
   background-color: white;
@@ -76,6 +83,13 @@
 .kirim-lifestyle:hover {
   background-color: rgb(223, 127, 3);
 }
+.card-analisis-rekomendasi {
+  margin-right: 10px;
+}
+.card-analisis-rekomendasi:hover {
+  background-color: rgba(224, 224, 224, 0.301);
+}
+
 @media (max-width: 442px) {
   .right-side-detail {
   }
