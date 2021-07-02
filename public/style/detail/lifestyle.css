@@ -1,0 +1,15 @@
+.date-lifestyle {
+  background-color: orange;
+  text-align: center;
+  color: white;
+  font-size: medium;
+  padding: 2%;
+  border-radius: 5px;
+}
+.tabel-lifestyle a {
+  color: rgb(0, 0, 0);
+}
+.tabel-data-lifestyle {
+  background-color: hsl(169, 92%, 24%);
+  color: white;
+}

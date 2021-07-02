@@ -20,6 +20,10 @@
   width: 120px;
   margin: auto;
 }
+.btn-lainya:hover {
+  background-color: #2daafd;
+}
+
 .btn-hasil-grafik {
   background-color: #51dfff;
   width: 120px;
@@ -32,6 +36,9 @@
   background-color: rgba(247, 122, 6, 0.877);
   width: 120px;
   margin: auto;
+}
+.btn-lifestyle:hover {
+  background-color: rgb(223, 127, 3);
 }
 .bg-grafik-detail {
   background-color: white;
@@ -58,7 +65,17 @@
 .tabel-data-detail-pasien tr {
   padding: 0%;
 }
-
+/* .inputan-judul-lifestyle,
+.inputan-pesan-lifestyle {
+  border: 1px solid orange;
+} */
+.kirim-lifestyle {
+  background-color: orange;
+  color: white;
+}
+.kirim-lifestyle:hover {
+  background-color: rgb(223, 127, 3);
+}
 @media (max-width: 442px) {
   .right-side-detail {
   }

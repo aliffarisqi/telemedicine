@@ -6,17 +6,11 @@
         <div class="col dashboard-content mt-5">
             <!-- Form Search -->
 
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-sm-8">
-                    <form class="form-group mb-3">
-                        <div class="row">
-                            <div class="col">
-                                <input class="form-control form-search" type="search" placeholder="Search">
-                            </div>
-                            <div class="col">
-                                <button class="btn btn-search float-left" type="submit">Search</button>
-                            </div>
-                        </div>
+                    <form class="form-inline">
+                        <input class="form-control mr-3" type="search" placeholder="Search">
+                        <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
                 <div class="col-sm-4 ">
@@ -40,7 +34,7 @@
                     <td class="textCenter"><input name="lifestyle" type="checkbox" disabled checked></td>
                     <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
                     <td class="textCenter">
-                        <a href="<?= base_url('/detail'); ?>"><button class="btn btn-detail">Detail</button></a>
+                        <a href="<?= base_url('/detail/detail'); ?>"><button class="btn btn-detail">Detail</button></a>
                         <button class="btn btn-edit">Edit</button>
                         <button class="btn btn-hapus">Hapus</button>
                     </td>

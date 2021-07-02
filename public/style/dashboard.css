@@ -67,12 +67,12 @@ table tr td {
 
 /* Form search  */
 .btn-search {
-  background-color: #057662;
+  background-color: #8beaff;
 }
 .form-search {
   background-color: #fafafa;
   max-width: 300px;
 }
 .btn-kirim-pesan {
-  background-color: #057662;
+  background-color: hsl(169, 92%, 24%);
 }

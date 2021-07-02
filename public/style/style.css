@@ -2,5 +2,6 @@
 @import url("login.css");
 @import url("landing_page.css");
 @import url("dashboard.css");
-@import url("detail.css");
+@import url("detail/detail.css");
+@import url("detail/lifestyle.css");
 @import url("content.css");

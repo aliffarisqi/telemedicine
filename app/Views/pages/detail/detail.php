@@ -25,10 +25,10 @@
             </div>
             <div class="row m-2">
                 <!-- Button trigger modal detail data pasien-->
-                <a href="" class="btn btn-lainya" data-toggle="modal" data-target="#exampleModal">Lainya</a>
+                <a href="" class="btn btn-lainya" data-toggle="modal" data-target="#modalLainya">Lainya</a>
             </div>
             <div class="row m-2">
-                <a href="" class="btn btn-lifestyle">Lifestyle</a>
+                <a href="<?= base_url('/detail/lifestyle'); ?>" class="btn btn-lifestyle">Lifestyle</a>
             </div>
         </div>
         <!-- right side monitoring -->
@@ -58,7 +58,7 @@
                             <h5>Analisis dan Rekomendasi</h5>
                         </div>
                         <div class="col">
-                            <a href="" class="btn btn-tambah-analisis float-right">+</a>
+                            <a href="" class="btn btn-tambah-analisis float-right" data-toggle="modal" data-target="#modalLifestyle">+</a>
                         </div>
                     </div>
 
@@ -88,8 +88,8 @@
 </div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal Lainya -->
+<div class="modal fade" id="modalLainya" tabindex="-1" aria-labelledby="modalLainyaLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="row">
@@ -158,6 +158,43 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Lainya -->
+<div class="modal fade" id="modalLifestyle" tabindex="-1" aria-labelledby="modalLifestyleLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-danger mt-2 mr-2 float-right close-data-detail-pasien" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-9">
+                    <h5 class="judul-detail-data-pasien pb-2">Analisis dan Rekomendasi</h5>
+                </div>
+            </div>
+            <div class="modal-body pb-0">
+                <div class="row justify-content-center">
+                    <div class="col-9 shadow-sm p-4">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control inputan-judul-lifestyle bg-light" id="judul-lifestyle" placeholder="Judul ...">
+                            </div>
+                            <div class="form-group">
+                                <textarea type="text" class="form-control inputan-pesan-lifestyle bg-light" id="judul-lifestyle" placeholder="Pesan ..."></textarea>
+                            </div>
+                            <button type="submit" class="btn float-right kirim-lifestyle">kirim</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row card-header mt-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="/grafik/highcharts.js"></script>
 <script src="/grafik/exporting.js"></script>
 <script src="/grafik/export-data.js"></script>
