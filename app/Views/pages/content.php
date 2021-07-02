@@ -67,8 +67,20 @@
                 <div class="card">
                     <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">Makanan Sehat</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content</p>
+                        <a href="" class="btn btn-info float-right">Lihat Selengkapnya>></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Makanan Sehat</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content</p>
+                        <a href="" class="btn btn-info float-right">Lihat Selengkapnya>></a>
                     </div>
                 </div>
             </div>
@@ -76,17 +88,9 @@
                 <div class="card">
                     <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Makanan Sehat</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <a href="" class="btn btn-info float-right">Lihat Selengkapnya>></a>
                     </div>
                 </div>
             </div>
@@ -94,8 +98,9 @@
                 <div class="card">
                     <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">Makanan Sehat</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content</p>
+                        <a href="" class="btn btn-info float-right">Lihat Selengkapnya>></a>
                     </div>
                 </div>
             </div>
