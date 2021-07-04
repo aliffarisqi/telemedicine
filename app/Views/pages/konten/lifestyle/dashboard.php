@@ -12,7 +12,7 @@
         </h5>
     </div>
 </div>
-<div class="container bg-white mt-4 p-4 mb-4 shadow">
+<div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
     <div class="row">
         <div class="col dashboard-content mt-2">
             <!-- Form Search -->
@@ -39,46 +39,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Merokok</td>
-                                <td>Edukasi perilaku</td>
-                                <td class="text-center">
-                                    <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan'); ?>" class="btn btn-primary-blue">Detail</a>
-                                    <a href="<?= base_url('/konten/lifestyle/editpertanyaan'); ?>" class="btn btn-info">Edit</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Terpapar Asap Rokok</td>
-                                <td>Edukasi perilaku</td>
-                                <td class="text-center">
-                                    <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan'); ?>" class="btn btn-primary-blue">Detail</a>
-                                    <a href="" class="btn btn-info">Edit</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Konsumsi Gula</td>
-                                <td>Dibatasi</td>
-                                <td class="text-center">
-                                    <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan'); ?>" class="btn btn-primary-blue">Detail</a>
-                                    <a href="" class="btn btn-info">Edit</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Konsumsi Buah</td>
-                                <td>Ditingkatkan</td>
-                                <td class="text-center">
-                                    <a href="" class="btn btn-primary-blue">Detail</a>
-                                    <a href="" class="btn btn-info">Edit</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
-                                </td>
-                            </tr>
+                            <?php $i = 1; ?>
+                            <?php foreach ($datapertanyaanlifestyle as $dpl) : ?>
+                                <tr>
+                                    <th scope="row"><?= $i++; ?></th>
+                                    <td><?= $dpl['data_pertanyaan']; ?></td>
+                                    <td><?= $dpl['jenis_pertanyaan']; ?></td>
+                                    <td class="text-center">
+                                        <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan/detail/' . $dpl['id_datalifestyle']); ?>" class="btn btn-primary-blue">Detail</a>
+                                        <a href="<?= base_url('/konten/lifestyle/editpertanyaan'); ?>" class="btn btn-info">Edit</a>
+                                        <a href="" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

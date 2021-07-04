@@ -35,7 +35,7 @@
                 </div>
             </form>
             <hr class="mt-4 mb-4">
-            <a href="" class="btn btn-info float-right ml-2">Save</a>
+            <a href="" class="btn btn-warna-orange float-right ml-2">Tambah</a>
             <a href="<?= base_url('/konten/lifestyle/dashboard'); ?>" class="btn btn-primary-blue float-right">Kembali</a>
         </div>
     </div>

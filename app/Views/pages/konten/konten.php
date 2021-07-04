@@ -60,7 +60,7 @@
             <h5 class="judul-konten-edukasi">Kontent Edukasi</h5>
         </div>
         <div class="col">
-            <a href="" class="btn btn-tambah-konten">Tambah Konten</a>
+            <a href="<?= base_url('/konten/artikel/tambahartikel'); ?>" class="btn btn-tambah-konten">Tambah artikel</a>
         </div>
         <div class="row row-cols-1 row-cols-md-3 mt-4">
             <div class="col mb-4">

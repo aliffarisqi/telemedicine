@@ -21,13 +21,13 @@
                     <label for="pertanyaanLifestyle" class="text-dark">
                         <h5>Pertanyaan</h5>
                     </label>
-                    <input type="text" class="form-control" id="pertanyaanLifestyle" value="Merokok" disabled>
+                    <input type="text" class="form-control" id="pertanyaanLifestyle" value="<?= $pertanyaanlifestyle['data_pertanyaan']; ?>" disabled>
                 </div>
                 <div class="form-group">
                     <label for="pertanyaanLifestyle" class="text-dark">
                         <h5>Jenis</h5>
                     </label>
-                    <input type="text" class="form-control" id="pertanyaanLifestyle" value="Edukasi Perilaku" disabled>
+                    <input type="text" class="form-control" id="pertanyaanLifestyle" value="<?= $pertanyaanlifestyle['jenis_pertanyaan']; ?>" disabled>
                 </div>
             </form>
             <hr class="mt-4 mb-4">
