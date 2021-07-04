@@ -51,13 +51,6 @@ table tr td {
   background-color: #8beaff;
 }
 
-.btn-edit {
-  background-color: #00d8b1;
-}
-
-.btn-hapus {
-  background-color: #ff2727;
-}
 .table-dashboard {
   background-color: #fafafa;
   border-radius: 10px;
@@ -66,19 +59,41 @@ table tr td {
 }
 
 /* Form search  */
-.btn-search {
-  background-color: #8beaff;
+.btn-primary-blue {
+  background-color: #26d7ff;
+}
+.btn-primary-blue:hover {
+  background-color: #00bee9;
+  color: white;
 }
 .form-search {
   background-color: #fafafa;
   max-width: 300px;
 }
-.btn-kirim-pesan {
-  background-color: hsl(169, 92%, 24%);
+.btn-warna-orange {
+  background-color: orange;
+}
+.btn-warna-orange:hover {
+  background-color: rgb(238, 143, 0);
+  color: white;
 }
 body {
   background-color: #eff3f8;
 }
-.header-dashboard h5 {
+.header-dashboard h5,
+.header-dashboard h5 a {
   color: #747474;
+  text-decoration: none;
+}
+.header-dashboard h5 a:hover {
+  color: #3b3b3b;
+}
+.judul-kirim-pesan {
+  border-bottom: 1px solid orange;
+  text-align: center;
+}
+@media (max-width: 442px) {
+  .space-mobile {
+    height: 50px;
+  }
 }

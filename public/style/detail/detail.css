@@ -89,11 +89,3 @@
 .card-analisis-rekomendasi:hover {
   background-color: rgba(224, 224, 224, 0.301);
 }
-
-@media (max-width: 442px) {
-  .right-side-detail {
-  }
-  .btn-hasil-grafik {
-    float: left;
-  }
-}

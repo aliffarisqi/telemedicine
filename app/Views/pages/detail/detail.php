@@ -3,7 +3,12 @@
 <?= $this->section('content'); ?>
 <div class="header-dashboard pt-4 pb-2 bg-white">
     <div class="container">
-        <h5>Detail Data Pasien</h5>
+        <h5>
+            <small>
+                <a href="<?= base_url('/dashboard'); ?>">Dashboard / </a>
+            </small>
+            Detail Data Pasien
+        </h5>
     </div>
 </div>
 <div class="container bg-white mt-4 p-4 mb-4">

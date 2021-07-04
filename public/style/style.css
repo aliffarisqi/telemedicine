@@ -4,4 +4,5 @@
 @import url("dashboard.css");
 @import url("detail/detail.css");
 @import url("detail/lifestyle.css");
-@import url("content.css");
+@import url("kontent/kontent.css");
+@import url("kontent/lifestyle.css");

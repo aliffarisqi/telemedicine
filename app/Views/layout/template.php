@@ -15,8 +15,10 @@
 
 <body>
     <?= $this->include('layout/nav-bar'); ?>
-    <?= $this->renderSection('content'); ?>
+    <?= $this->include('layout/spacemobile'); ?>
 
+    <?= $this->renderSection('content'); ?>
+    <?= $this->include('layout/footer'); ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
