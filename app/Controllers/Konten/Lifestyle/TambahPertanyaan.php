@@ -16,18 +16,34 @@ class TambahPertanyaan extends BaseController
     }
     public function index()
     {
+        session();
         $data = [
             'title' => 'Tambah Pertanyaan',
-            'jenisLifestyle' => $this->dataJenisPertanyaan->getJenislifestyle()
+            'jenisLifestyle' => $this->dataJenisPertanyaan->getJenislifestyle(),
+            'validation' => \Config\Services::validation()
         ];
         return view('/pages/konten/lifestyle/tambahpertanyaan', $data);
     }
     public function save()
     {
+        //validation
+        if (!$this->validate([
+            'pertanyaan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'kolom {field} Harus di isi '
+                ]
+            ]
+        ])) {
+            return redirect()->to('/konten/lifestyle/tambahpertanyaan')->withInput();
+        }
+
+        //memasukan data ke database
         $this->dataPertanyaan->save([
-            'data_pertanyaan' => $this->request->getVar('pertanyaan'),
+            'data_pertanyaan' => htmlspecialchars($this->request->getVar('pertanyaan')),
             'jenis_pertanyaan' => $this->request->getVar('jenis')
         ]);
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan');
         return redirect()->to('/konten/lifestyle/dashboard/');
     }
 }

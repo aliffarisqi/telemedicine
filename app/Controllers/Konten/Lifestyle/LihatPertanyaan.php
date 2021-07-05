@@ -12,14 +12,6 @@ class LihatPertanyaan extends BaseController
     {
         $this->dataPertanyaanLifestyleModel = new PertanyaanLifestyleModel();
     }
-    // public function index()
-    // {
-    //     $data = [
-    //         'title' => 'Pertanyaan',
-    //         'pertanyaanlifestyle' => $this->dataPertanyaanLifestyleModel->getDataPertanyaanLifestyle()
-    //     ];
-    //     return view('pages\konten\lifestyle\lihatpertanyaan', $data);
-    // }
     public function detail($id)
     {
         $data = [
@@ -31,6 +23,7 @@ class LihatPertanyaan extends BaseController
     public function delete($id)
     {
         $this->dataPertanyaanLifestyleModel->delete($id);
+        session()->setFlashdata('pesan', 'Data berhasil di Delete');
         return redirect()->to('/konten/lifestyle/dashboard');
     }
 }

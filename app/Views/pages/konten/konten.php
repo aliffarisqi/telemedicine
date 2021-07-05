@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="col-4 text-center">
-                            <h3 class="jumlah-pertanyaan m-0">20</h3>
+                            <h3 class="jumlah-pertanyaan m-0"><?= $datalifestyle; ?></h3>
                             <h6 class="text-center m-0">Pertanyaan</h6>
                             <a href="<?= base_url('/konten/lifestyle/tambahpertanyaan'); ?>" class="btn btn-danger rounded m-2"><small> Tambah +</small></a>
                         </div>
@@ -55,56 +55,40 @@
 
     </div>
     <div class="row bg-light mt-4 ml-1 mr-1 rounded p-4">
-
         <div class="col">
-            <h5 class="judul-konten-edukasi">Kontent Edukasi</h5>
-        </div>
-        <div class="col">
-            <a href="<?= base_url('/konten/artikel/tambahartikel'); ?>" class="btn btn-tambah-konten">Tambah artikel</a>
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 mt-4">
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Makanan Sehat</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content</p>
-                        <a href="" class="btn btn-info float-right">Lihat Selengkapnya>></a>
+            <div class="row">
+                <div class="col">
+                    <h5 class="judul-konten-edukasi">Kontent Edukasi</h5>
+                </div>
+                <div class="col">
+                    <a href="<?= base_url('/konten/artikel/tambahartikel'); ?>" class="btn btn-tambah-konten">Tambah artikel</a>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mt-4">
+                <?php foreach ($kontenartikel as $ka) : ?>
+                    <div class="col mb-4">
+                        <div class="card">
+                            <img src="<?= $ka['gambar_konten']; ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $ka['judul_konten']; ?></h5>
+                                <p class="card-text"><?= substr($ka['isi_konten'], 0, 70); ?> . . . . .</p>
+                                <small>by : <?= $ka['publisher']; ?></small>
+                                <hr>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <a href="" class="btn btn-primary-blue">Detail</a>
+                                        <a href="" class="btn btn-info">Edit</a>
+                                        <a href="" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
 
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Makanan Sehat</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content</p>
-                        <a href="" class="btn btn-info float-right">Lihat Selengkapnya>></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Makanan Sehat</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                        <a href="" class="btn btn-info float-right">Lihat Selengkapnya>></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="/img/konten/kontent1.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Makanan Sehat</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content</p>
-                        <a href="" class="btn btn-info float-right">Lihat Selengkapnya>></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>
 

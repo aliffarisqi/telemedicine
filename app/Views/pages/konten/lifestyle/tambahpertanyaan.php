@@ -22,7 +22,10 @@
                     <label for="pertanyaanLifestyle" class="text-dark">
                         <h5>Pertanyaan</h5>
                     </label>
-                    <input type="text" class="form-control" id="pertanyaanLifestyle" name="pertanyaan">
+                    <input type="text" class="form-control <?= ($validation->hasError('pertanyaan')) ? 'is-invalid' : ''; ?>" id="pertanyaanLifestyle" name="pertanyaan">
+                    <div class="invalid-feedback">
+                        <?= $validation->getError('pertanyaan'); ?>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="jenisLifestyle" class="text-dark">

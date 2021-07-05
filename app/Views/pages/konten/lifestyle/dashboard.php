@@ -16,6 +16,14 @@
     <div class="row">
         <div class="col dashboard-content mt-2">
             <!-- Form Search -->
+            <?php if (session()->getFlashdata('pesan')) : ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= session()->getFlashdata('pesan'); ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif; ?>
             <div class="row mb-4">
                 <div class="col-sm-8">
                     <form class="form-inline">
@@ -47,8 +55,8 @@
                                     <td><?= $dpl['jenis_pertanyaan']; ?></td>
                                     <td class="text-center">
                                         <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan/detail/' . $dpl['id_datalifestyle']); ?>" class="btn btn-primary-blue">Detail</a>
-                                        <a href="<?= base_url('/konten/lifestyle/editpertanyaan'); ?>" class="btn btn-info">Edit</a>
-                                        <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan/delete/' . $dpl['id_datalifestyle']); ?>" class="btn btn-danger">Delete</a>
+                                        <a href="<?= base_url('/konten/lifestyle/editpertanyaan/update/' . $dpl['id_datalifestyle']); ?>" class="btn btn-info">Edit</a>
+                                        <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan/delete/' . $dpl['id_datalifestyle']); ?>" class="btn btn-danger" onclick="return confirm('apakah anda yakin ? ');">Delete</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

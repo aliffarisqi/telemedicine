@@ -13,4 +13,8 @@ class TambahArtikel extends BaseController
         ];
         return view('pages\konten\artikel\tambahartikel', $data);
     }
+    public function save()
+    {
+        dd($this->request->getVar());
+    }
 }
