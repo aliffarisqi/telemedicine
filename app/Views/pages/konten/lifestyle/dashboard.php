@@ -24,7 +24,7 @@
                     </form>
                 </div>
                 <div class="col-sm-4 ">
-                    <a href="<?= base_url('/konten/lifestyle/tambahpertanyaan'); ?>" class="btn btn-warna-orange float-right">Tambah Pertanyaan</a>
+                    <a href="<?= base_url('/konten/lifestyle/tambahpertanyaan/'); ?>" class="btn btn-warna-orange float-right">Tambah Pertanyaan</a>
                 </div>
             </div>
             <div class="row">
@@ -48,7 +48,7 @@
                                     <td class="text-center">
                                         <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan/detail/' . $dpl['id_datalifestyle']); ?>" class="btn btn-primary-blue">Detail</a>
                                         <a href="<?= base_url('/konten/lifestyle/editpertanyaan'); ?>" class="btn btn-info">Edit</a>
-                                        <a href="" class="btn btn-danger">Delete</a>
+                                        <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan/delete/' . $dpl['id_datalifestyle']); ?>" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

@@ -28,4 +28,9 @@ class LihatPertanyaan extends BaseController
         ];
         return view('pages\konten\lifestyle\lihatpertanyaan', $data);
     }
+    public function delete($id)
+    {
+        $this->dataPertanyaanLifestyleModel->delete($id);
+        return redirect()->to('/konten/lifestyle/dashboard');
+    }
 }
