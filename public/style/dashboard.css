@@ -7,6 +7,11 @@ table {
   background-color: #057662;
   color: white;
 }
+
+.warna-hijau {
+  background-color: #057662;
+}
+
 .tableHeader .number,
 .tdLifestyle,
 .tdKepatuhan {

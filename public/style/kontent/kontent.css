@@ -19,3 +19,9 @@
   background-color: rgb(206, 110, 0);
   color: white;
 }
+.form-kuesioner {
+  border-bottom: 2px solid #009277 !important;
+}
+.card-kuesioner {
+  border-left: 5px solid #17a2b8;
+}
