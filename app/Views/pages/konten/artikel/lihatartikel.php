@@ -18,7 +18,7 @@
             <div class="card mb-3">
                 <img src="<?= base_url('/img/konten/' . $datakonten['gambar_konten']); ?>" class="card-img-top">
                 <div class="card-body text-dark">
-                    <h2 class="card-title"><?= $datakonten['judul_konten']; ?></h2>
+                    <h5 class="card-title"><?= $datakonten['judul_konten']; ?></h5>
                     <p class="card-text text-justify"><?= $datakonten['isi_konten']; ?></p>
                     <h6 class="card-text">Di tulis oleh : <?= $datakonten['publisher']; ?></h6>
                     <hr>

@@ -45,7 +45,7 @@
                         <div class="col-4 text-center">
                             <h3 class="jumlah-pertanyaan m-0">5</h3>
                             <h6 class="text-center m-0">Pertanyaan</h6>
-                            <a href="" class="btn btn-danger rounded m-2"><small> Tambah +</small></a>
+                            <a href="<?= base_url('/konten/kepatuhan/kuesionerkepatuhan'); ?>" class="btn btn-danger rounded m-2"><small> Tambah +</small></a>
                         </div>
                     </div>
                 </div>

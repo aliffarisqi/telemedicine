@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col text-center">
                     <h5>
-                        <a href="<?= base_url('/konten/kepatuhan/kuesionerkepatuhan'); ?>" class="btn btn-light text-info">kepatuhan</a>
+                        <a href="<?= base_url('/konten/kepatuhan/kuesionerkepatuhan'); ?>" class="btn btn-light text-info active">kepatuhan</a>
                         | <a href="<?= base_url('/konten/kepatuhan/tanggapan'); ?>" class="btn btn-light text-info">Tanggapan</a>
                     </h5>
                 </div>

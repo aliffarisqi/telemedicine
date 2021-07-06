@@ -73,18 +73,18 @@
                     <div class="row pl-3 pr-3">
                         <div class="card text-center card-analisis-rekomendasi" style="max-width: 18rem;">
                             <div class="card-header header-card-analisis">
-                                21/02/13
+                                05/06/2021
                             </div>
                             <div class="card-body">
-                                <p class="card-text">Perbanyak Minum Vitamin</p>
+                                <p class="card-text">Perbanyak Minum Air Putih</p>
                             </div>
                         </div>
                         <div class="card text-center card-analisis-rekomendasi" style="max-width: 18rem;">
                             <div class="card-header header-card-analisis">
-                                21/02/13
+                                07/06/2021
                             </div>
                             <div class="card-body">
-                                <p class="card-text">Perbanyak Minum Vitamin</p>
+                                <p class="card-text">Kurangi Mengkonsumsi Gorengan</p>
                             </div>
                         </div>
                     </div>
@@ -214,7 +214,7 @@
         },
 
         subtitle: {
-            text: 'ady pharm'
+            text: 'Bulan Juli'
         },
 
         yAxis: {
@@ -224,7 +224,7 @@
         },
 
         xAxis: {
-            categories: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu']
+            categories: ['Minggu 1', 'Minggu 2', 'Minggu 3', 'Minggu 4']
         },
 
         legend: {
@@ -235,10 +235,10 @@
 
         series: [{
             name: 'Sistolsik',
-            data: [90, 90, 85, 105, 110, 100, 120]
+            data: [93, 95, 90, 95]
         }, {
             name: 'Diastolsik',
-            data: [105, 90, 85, 90, 115, 120, 95]
+            data: [90, 97, 90, 94]
         }],
 
         responsive: {

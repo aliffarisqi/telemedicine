@@ -24,7 +24,7 @@
         </div>
         <div class="col-3">
             <div class="date-lifestyle ">
-                <p>15/04/2021</p>
+                <p>Juli Minggu 1</p>
             </div>
         </div>
     </div>
@@ -45,178 +45,243 @@
         </div>
         <div class="card-body">
             <?php if ($tabel == "edukasi perilaku") { ?>
-                <table class="table table-bordered">
-                    <thead class="tabel-data-lifestyle">
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Perilaku</th>
-                            <th scope="col">1</th>
-                            <th scope="col">2</th>
-                            <th scope="col">3</th>
-                            <th scope="col">4</th>
-                            <th scope="col">5</th>
-                            <th scope="col">6</th>
-                            <th scope="col">7</th>
-                            <th scope="col">8</th>
-                            <th scope="col">9</th>
-                            <th scope="col">10</th>
-                            <th scope="col">11</th>
-                            <th scope="col">12</th>
-                            <th scope="col">13</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td class="text-left">Merokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td class="text-left">Terpapar asap Rokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td class="text-left">Merokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td class="text-left">Terpapar asap Rokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td class="text-left">Merokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td class="text-left">Terpapar asap Rokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="tabel-data-lifestyle">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Perilaku</th>
+                                <th scope="col">1</th>
+                                <th scope="col">2</th>
+                                <th scope="col">3</th>
+                                <th scope="col">4</th>
+                                <th scope="col">5</th>
+                                <th scope="col">6</th>
+                                <th scope="col">7</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td class="text-left">Merokok</td>
+                                <td>ya</td>
+                                <td>tidak</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td class="text-left">Terpapar asap Rokok</td>
+                                <td>ya</td>
+                                <td>tidak</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             <?php } elseif ($tabel == "pola makan") { ?>
-                <table class="table table-bordered">
-                    <thead class="tabel-data-lifestyle">
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Perilaku</th>
-                            <th scope="col">1</th>
-                            <th scope="col">2</th>
-                            <th scope="col">3</th>
-                            <th scope="col">4</th>
-                            <th scope="col">5</th>
-                            <th scope="col">6</th>
-                            <th scope="col">7</th>
-                            <th scope="col">8</th>
-                            <th scope="col">9</th>
-                            <th scope="col">10</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td class="text-left">Merokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td class="text-left">Terpapar asap Rokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td class="text-left">Merokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td class="text-left">Terpapar asap Rokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td class="text-left">Merokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td class="text-left">Terpapar asap Rokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+
+                    <table class="table table-bordered">
+                        <thead class="tabel-data-lifestyle">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Perilaku</th>
+                                <th scope="col">1</th>
+                                <th scope="col">2</th>
+                                <th scope="col">3</th>
+                                <th scope="col">4</th>
+                                <th scope="col">5</th>
+                                <th scope="col">6</th>
+                                <th scope="col">7</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td class="text-left">Konsumsi Kopi</td>
+                                <td>ya</td>
+                                <td>tidak</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td class="text-left">pembatasan Gula</td>
+                                <td>tidak</td>
+                                <td>ya</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td class="text-left">Pebatasan Garam</td>
+                                <td>ya</td>
+                                <td>tidak</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td class="text-left">Susu Ketal Manis</td>
+                                <td>tidak</td>
+                                <td>ya</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td class="text-left">Pembatasan Lemak</td>
+                                <td>ya</td>
+                                <td>tidak</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td class="text-left">Konsumsi Gorengan</td>
+                                <td>ya</td>
+                                <td>tidak</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td class="text-left">Konsumsi santan</td>
+                                <td>tidak</td>
+                                <td>ya</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td class="text-left">Konsumsi Teh</td>
+                                <td>ya</td>
+                                <td>tidak</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td class="text-left">Konsumsi Buah</td>
+                                <td>ya</td>
+                                <td>tidak</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10</th>
+                                <td class="text-left">Konsumsi Sayur</td>
+                                <td>tidak</td>
+                                <td>ya</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">11</th>
+                                <td class="text-left">Konsumsi Putih/Mineral</td>
+                                <td>tidak</td>
+                                <td>ya</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             <?php } else { ?>
-                <table class="table table-bordered">
-                    <thead class="tabel-data-lifestyle">
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Perilaku</th>
-                            <th scope="col">1</th>
-                            <th scope="col">2</th>
-                            <th scope="col">3</th>
-                            <th scope="col">4</th>
-                            <th scope="col">5</th>
-                            <th scope="col">6</th>
-                            <th scope="col">7</th>
-                            <th scope="col">8</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td class="text-left">Merokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td class="text-left">Terpapar asap Rokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td class="text-left">Merokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td class="text-left">Terpapar asap Rokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td class="text-left">Merokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td class="text-left">Terpapar asap Rokok</td>
-                            <td>ya</td>
-                            <td>tidak</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+
+                    <table class="table table-bordered">
+                        <thead class="tabel-data-lifestyle">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Perilaku</th>
+                                <th scope="col">1</th>
+                                <th scope="col">2</th>
+                                <th scope="col">3</th>
+                                <th scope="col">4</th>
+                                <th scope="col">5</th>
+                                <th scope="col">6</th>
+                                <th scope="col">7</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td class="text-left">Peregangan Otot</td>
+                                <td>ya</td>
+                                <td>tidak</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td class="text-left">Jalan Kaki</td>
+                                <td>tidak</td>
+                                <td>ya</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             <?php } ?>
+        </div>
+        <div class="row text-right m-2">
+            <div class="col">
+                <a href="" class="btn btn-light text-dark btn-outline-info">Juni</a>
+                <a href="" class="btn btn-info text-white">1</a>
+                <a href="" class="btn btn-light text-dark btn-outline-info">2</a>
+                <a href="" class="btn btn-light text-dark btn-outline-info">3</a>
+            </div>
         </div>
     </div>
 </div>
