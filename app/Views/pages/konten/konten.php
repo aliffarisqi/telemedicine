@@ -56,19 +56,27 @@
     </div>
     <div class="row bg-light mt-4 ml-1 mr-1 rounded p-4">
         <div class="col">
+            <?php if (session()->getFlashdata('pesan')) : ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= session()->getFlashdata('pesan'); ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif; ?>
             <div class="row">
                 <div class="col">
                     <h5 class="judul-konten-edukasi">Kontent Edukasi</h5>
                 </div>
                 <div class="col">
-                    <a href="<?= base_url('/konten/artikel/tambahartikel'); ?>" class="btn btn-tambah-konten">Tambah artikel</a>
+                    <a href="<?= base_url('/konten/artikel/artikel'); ?>" class="btn btn-tambah-konten">Tambah artikel</a>
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-3 mt-4">
                 <?php foreach ($kontenartikel as $ka) : ?>
                     <div class="col mb-4">
                         <div class="card">
-                            <img src="<?= $ka['gambar_konten']; ?>" class="card-img-top" alt="...">
+                            <img src="<?= base_url('/img/konten/' . $ka['gambar_konten']); ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $ka['judul_konten']; ?></h5>
                                 <p class="card-text"><?= substr($ka['isi_konten'], 0, 70); ?> . . . . .</p>
@@ -76,9 +84,9 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col text-center">
-                                        <a href="" class="btn btn-primary-blue">Detail</a>
-                                        <a href="" class="btn btn-info">Edit</a>
-                                        <a href="" class="btn btn-danger">Delete</a>
+                                        <a href="/konten/artikel/artikel/detail/<?= $ka['id_konten']; ?>" class="btn btn-primary-blue">Detail</a>
+                                        <a href="/konten/artikel/artikel/update/<?= $ka['id_konten']; ?>" class="btn btn-info">Edit</a>
+                                        <a href="/konten/artikel/artikel/delete/<?= $ka['id_konten']; ?>" class="btn btn-danger" onclick="return confirm('apakah anda yakin ? ');">Delete</a>
                                     </div>
                                 </div>
                             </div>

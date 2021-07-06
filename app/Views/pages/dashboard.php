@@ -40,7 +40,6 @@
                     <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
                     <td class="textCenter">
                         <a href="<?= base_url('/detail/detail'); ?>"><button class="btn btn-primary-blue">Detail</button></a>
-                        <button class="btn btn-info">Edit</button>
                         <button class="btn btn-danger">Hapus</button>
                     </td>
                 </tr>
@@ -52,7 +51,6 @@
                     <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
                     <td class="textCenter">
                         <button class="btn btn-primary-blue">Detail</button>
-                        <button class="btn btn-info">Edit</button>
                         <button class="btn btn-danger">Hapus</button>
                     </td>
                 </tr>
@@ -64,7 +62,6 @@
                     <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
                     <td class="textCenter">
                         <button class="btn btn-primary-blue">Detail</button>
-                        <button class="btn btn-info">Edit</button>
                         <button class="btn btn-danger">Hapus</button>
                     </td>
                 </tr>
@@ -76,7 +73,6 @@
                     <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
                     <td class="textCenter">
                         <button class="btn btn-primary-blue">Detail</button>
-                        <button class="btn btn-info">Edit</button>
                         <button class="btn btn-danger">Hapus</button>
                     </td>
                 </tr>

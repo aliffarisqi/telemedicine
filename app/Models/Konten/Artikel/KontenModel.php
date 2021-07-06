@@ -14,6 +14,6 @@ class KontenModel extends Model
         if ($id == false) {
             return $this->findAll();
         }
-        return $this->where(['id_konten' => $id]);
+        return $this->where(['id_konten' => $id])->first();
     }
 }

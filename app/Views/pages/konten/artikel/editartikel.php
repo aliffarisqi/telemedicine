@@ -8,20 +8,22 @@
             <small>
                 <a href="<?= base_url('/konten/konten'); ?>">Konten / </a>
             </small>
-            Tambah Artikel
+            Edit Artikel
         </h5>
     </div>
 </div>
 <div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
     <div class="row">
         <div class="col bg-light m-2 p-4">
-            <form action="/Konten/artikel/artikel/save" method="POST" enctype="multipart/form-data">
+            <form action="/Konten/artikel/artikel/updateprocess" method="POST" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
+                <input type="hidden" name="id_konten" value="<?= $datakonten['id_konten']; ?>">
+                <input type="hidden" name="gambarlama" value="<?= $datakonten['gambar_konten']; ?>">
                 <div class="form-group">
                     <label for="judulkonten" class="text-dark">
                         <h5>Judul</h5>
                     </label>
-                    <input type="text" class="form-control <?= ($validation->hasError('judulkonten')) ? 'is-invalid' : ''; ?>" id="judulkonten" value="<?= old('judulkonten'); ?>" name="judulkonten" placeholder="Judul ...">
+                    <input type="text" class="form-control <?= ($validation->hasError('judulkonten')) ? 'is-invalid' : ''; ?>" id="judulkonten" value="<?= (old('judul_konten')) ? old('judul_konten') : $datakonten['judul_konten'] ?>" name="judulkonten" placeholder="Judul ...">
                     <div class="invalid-feedback">
                         <?= $validation->getError('judulkonten'); ?>
                     </div>
@@ -30,7 +32,7 @@
                     <label for="publisher" class="text-dark">
                         <h5>Penulis</h5>
                     </label>
-                    <input type="text" class="form-control <?= ($validation->hasError('publisher')) ? 'is-invalid' : ''; ?>" id="publisher" placeholder="Penulis Artikel ..." name="publisher" value="<?= old('publisher'); ?>">
+                    <input type="text" class="form-control <?= ($validation->hasError('publisher')) ? 'is-invalid' : ''; ?>" id="publisher" placeholder="Penulis Artikel ..." name="publisher" value="<?= (old('publisher')) ? old('publisher') : $datakonten['publisher'] ?>">
                     <div class="invalid-feedback">
                         <?= $validation->getError('publisher'); ?>
                     </div>
@@ -39,7 +41,7 @@
                     <label for="isikonten" class="text-dark">
                         <h5>Isi Konten</h5>
                     </label>
-                    <textarea type="text" class="form-control <?= ($validation->hasError('isiartikel')) ? 'is-invalid' : ''; ?>" id="isikonten" placeholder="isi artikel ..." name="isiartikel" value="<?= old('isiartikel'); ?>"></textarea>
+                    <textarea type="text" class="form-control <?= ($validation->hasError('isiartikel')) ? 'is-invalid' : ''; ?>" id="isikonten" placeholder="isi artikel ..." name="isiartikel" value="<?= (old('isiartikel')) ? old('isiartikel') : $datakonten['isi_konten'] ?>"><?= $datakonten['isi_konten']; ?></textarea>
                     <div class="invalid-feedback">
                         <?= $validation->getError('isiartikel'); ?>
                     </div>
@@ -50,7 +52,7 @@
                         <h5>Gambar Konten</h5>
                     </label>
                     <div class="col-sm-2">
-                        <img src="/img/konten/default.png" class="img-thumbnail img-preview-konten">
+                        <img src="<?= base_url('/img/konten/' . $datakonten['gambar_konten']); ?>" class="img-thumbnail img-preview-konten">
                     </div>
                     <div class="col-sm-8">
                         <div class="input-group">
@@ -65,7 +67,7 @@
                 <hr class="mt-4 mb-4">
                 <div class="form-group row mb-3">
                     <div class="col float-right">
-                        <button type="submit" class="btn btn-warna-orange float-right ml-2">Tambah</button>
+                        <button type="submit" class="btn btn-warna-orange float-right ml-2">Save</button>
                         <a href="<?= base_url('/konten/konten'); ?>" class="btn btn-primary-blue float-right">Kembali</a>
                     </div>
                 </div>
