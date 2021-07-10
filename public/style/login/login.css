@@ -1,0 +1,46 @@
+.jumbotron {
+  background-image: url("/img/bglogin.png");
+  background-size: cover;
+  height: 600px;
+}
+.warna-orange {
+  color: orange;
+}
+.inputan {
+  border: solid 1px orange;
+}
+.bg-warna-orange {
+  background-color: orange;
+  color: white;
+}
+.bg-warna-orange:hover {
+  background-color: rgb(231, 131, 0);
+  color: white;
+}
+.btn-login {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+@media (min-width: 750px) {
+  .judul-login {
+    margin-bottom: 50px;
+  }
+  .p-login {
+    padding-left: 20px;
+    padding-right: 10px;
+    text-align: justify;
+  }
+  .input-login {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 720px) {
+  .text-login {
+    text-align: center;
+  }
+  .input-login {
+    padding: 0px;
+  }
+}

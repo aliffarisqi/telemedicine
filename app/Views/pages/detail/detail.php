@@ -11,7 +11,7 @@
         </h5>
     </div>
 </div>
-<div class="container bg-white mt-4 p-4 mb-4">
+<div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
     <!-- isi detail -->
     <div class="row mt-2 pr-2 pb-4">
         <!-- left side profile -->
@@ -35,10 +35,14 @@
             </div>
             <div class="row m-2">
                 <!-- Button trigger modal detail data pasien-->
-                <a href="" class="btn btn-lainya" data-toggle="modal" data-target="#modalLainya">Lainya</a>
+                <a href="" class="btn btn-lainya" data-toggle="modal" data-target="#modalLainya">Lainya<i class="fas fa-user-plus ml-2"></i></a>
+            </div>
+            <hr>
+            <div class="row m-2">
+                <a href="<?= base_url('/detail/lifestyle/edukasiperilaku/2'); ?>" class="btn btn-lifestyle">Lifestyle<i class="fas fa-calendar-check ml-2"></i></a>
             </div>
             <div class="row m-2">
-                <a href="<?= base_url('/detail/lifestyle/edukasiperilaku/2'); ?>" class="btn btn-lifestyle">Lifestyle</a>
+                <a href="<?= base_url('/detail/lifestyle/edukasiperilaku/2'); ?>" class="btn btn-kepatuhan">Kepatuhan<i class="fas fa-calendar-check ml-2"></i></a>
             </div>
         </div>
         <!-- right side monitoring -->
@@ -46,7 +50,7 @@
             <!-- header -->
             <div class="row m-3">
                 <div class="col title-monitoring-detail ">
-                    <h4>Monitoring Pasien</h4>
+                    <h4>Monitoring Pasien </h4>
                 </div>
             </div>
             <!-- card grafik -->
@@ -108,7 +112,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-9">
-                    <h5 class="judul-detail-data-pasien pb-2">Biodata</h5>
+                    <h5 class="judul-detail-data-pasien pb-2"><i class="fas fa-user mr-2"></i>Biodata</h5>
                 </div>
             </div>
             <div class="modal-body pb-0">
@@ -119,6 +123,10 @@
                                 <tr>
                                     <td>Nama</td>
                                     <td>: Khusniah Arief</td>
+                                </tr>
+                                <tr>
+                                    <td>Puskesmas</td>
+                                    <td>: Danasari</td>
                                 </tr>
                                 <tr>
                                     <td>Usia</td>
@@ -234,10 +242,10 @@
         },
 
         series: [{
-            name: 'Sistolsik',
+            name: 'Sistolik',
             data: [93, 95, 90, 95]
         }, {
-            name: 'Diastolsik',
+            name: 'Diastolik',
             data: [90, 97, 90, 94]
         }],
 

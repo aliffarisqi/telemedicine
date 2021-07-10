@@ -25,13 +25,23 @@
                 </div>
             <?php endif; ?>
             <div class="row mb-4">
-                <div class="col-sm-8">
-                    <form class="form-inline">
-                        <input class="form-control mr-3" type="search" placeholder="Search">
-                        <button class="btn btn-primary-blue my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <form>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <input class="form-control m-0" type="search" placeholder="Search">
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-primary-blue" type="submit"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-4 ">
+                <div class="col float left">
                     <a href="<?= base_url('/konten/lifestyle/tambahpertanyaan/'); ?>" class="btn btn-warna-orange float-right">Tambah Pertanyaan</a>
                 </div>
             </div>
@@ -54,9 +64,9 @@
                                     <td><?= $dpl['data_pertanyaan']; ?></td>
                                     <td><?= $dpl['jenis_pertanyaan']; ?></td>
                                     <td class="text-center">
-                                        <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan/detail/' . $dpl['id_datalifestyle']); ?>" class="btn btn-primary-blue">Detail</a>
-                                        <a href="<?= base_url('/konten/lifestyle/editpertanyaan/update/' . $dpl['id_datalifestyle']); ?>" class="btn btn-info">Edit</a>
-                                        <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan/delete/' . $dpl['id_datalifestyle']); ?>" class="btn btn-danger" onclick="return confirm('apakah anda yakin ? ');">Delete</a>
+                                        <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan/detail/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-primary-blue">Detail</a>
+                                        <a href="<?= base_url('/konten/lifestyle/editpertanyaan/update/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-info">Edit</a>
+                                        <a href="<?= base_url('/konten/lifestyle/lihatpertanyaan/delete/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-danger" onclick="return confirm('apakah anda yakin Untuk Menghapus Pertanyaan ini ? ');">Delete</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -67,4 +77,5 @@
         </div>
     </div>
 </div>
+
 <?= $this->endSection(); ?>

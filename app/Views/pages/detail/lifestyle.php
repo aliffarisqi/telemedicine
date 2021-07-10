@@ -14,7 +14,10 @@
 </div>
 <div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
     <div class="row mb-4 ">
-        <div class="col-9 pl-3">
+        <div class="col-sm-1 text-center pl-3 mr-0 pr-0">
+            <h1><i class="fas fa-user-circle"></i></h1>
+        </div>
+        <div class="col-sm-8 pl-4 mb-2 ml-0">
             <div class="row m-0">
                 <p class="m-0 text-dark"><b>Nama : Muchamad Ridho</b></p>
             </div>
@@ -22,10 +25,8 @@
                 <p class="m-0 text-dark">Usia : 18 tahun</p>
             </div>
         </div>
-        <div class="col-3">
-            <div class="date-lifestyle ">
-                <p>Juli Minggu 1</p>
-            </div>
+        <div class="col-sm-3 pl-4 mb-2">
+            <p class="bg-warna-orange p-2 text-center rounded text-white"><i class="far fa-calendar-alt mr-2"></i>07 Juli 2021</p>
         </div>
     </div>
     <div class="card text-center tabel-lifestyle">

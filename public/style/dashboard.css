@@ -75,12 +75,18 @@ table tr td {
   background-color: #fafafa;
   max-width: 300px;
 }
+.bg-warna-orange {
+  background-color: orange;
+}
 .btn-warna-orange {
   background-color: orange;
 }
 .btn-warna-orange:hover {
   background-color: rgb(238, 143, 0);
   color: white;
+}
+.warna-orange {
+  color: orange;
 }
 body {
   background-color: #eff3f8;

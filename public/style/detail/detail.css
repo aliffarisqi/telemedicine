@@ -15,19 +15,29 @@
   font-size: 20px;
   color: rgb(99, 99, 99);
 }
-.btn-lainya {
+.btn-kepatuhan {
   background-color: #51dfff;
-  width: 120px;
+  width: 130px;
   margin: auto;
 }
-.btn-lainya:hover {
+.btn-kepatuhan:hover {
   background-color: #2daafd;
   color: white;
+}
+.btn-lainya {
+  background-color: #ffffff;
+  width: 130px;
+  margin: auto;
+  border: 1px solid rgb(192, 192, 192);
+  color: rgb(99, 99, 99);
+}
+.btn-lainya:hover {
+  background-color: #e7e7e7;
 }
 
 .btn-hasil-grafik {
   background-color: #51dfff;
-  width: 120px;
+  width: 130px;
 }
 .btn-tambah-analisis {
   background-color: red;
@@ -40,7 +50,7 @@
 }
 .btn-lifestyle {
   background-color: rgba(247, 122, 6, 0.877);
-  width: 120px;
+  width: 130px;
   margin: auto;
 }
 .btn-lifestyle:hover {

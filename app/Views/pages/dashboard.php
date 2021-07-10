@@ -6,20 +6,28 @@
         <h5>Dashboard</h5>
     </div>
 </div>
-<div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
-    <div class="row">
+<div class="container bg-white mt-4 p-4 mb-4 shadow-sm ">
+    <div class="row ">
         <div class="col dashboard-content mt-2">
             <!-- Form Search -->
-
             <div class="row mb-4">
-                <div class="col-sm-8">
-                    <div class="row"></div>
-                    <form class="form-inline">
-                        <input class="form-control mr-3" type="search" placeholder="Search">
-                        <button class="btn btn-primary-blue my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <form>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <input class="form-control m-0" type="search" placeholder="Search">
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-primary-blue" type="submit"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-4 ">
+                <div class="col float left">
                     <a href="" class="btn btn-warna-orange float-right" data-toggle="modal" data-target="#modalKirimPesan">Kirim Pesan</a>
                 </div>
             </div>
@@ -35,46 +43,79 @@
                     </tr>
                     <tr>
                         <td class="textCenter">1</td>
-                        <td>Eko Muhammad Rilo Pembudi</td>
+                        <td>Muhammad Ridho</td>
                         <td>Hipertensi</td>
-                        <td class="textCenter"><input name="lifestyle" type="checkbox" disabled checked></td>
-                        <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
                         <td class="textCenter">
-                            <a href="<?= base_url('/detail/detail'); ?>"><button class="btn btn-primary-blue">Detail</button></a>
-                            <button class="btn btn-danger">Hapus</button>
+                            <h4 class="text-dark"><i class="fas fa-check-square"></i></h4>
+                        </td>
+                        <td class="textCenter">
+                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
+                        </td>
+                        <td class="textCenter">
+                            <a href="<?= base_url('/detail/detail'); ?>" class="btn mb-1 btn-primary-blue">Detail</a>
+                            <button class="btn mb-1 btn-danger">Hapus</button>
                         </td>
                     </tr>
                     <tr>
                         <td class="textCenter">2</td>
-                        <td>Qurrota Nastiti Rizqita Aura Syifa</td>
+                        <td>Rifqi luthfi Naldi</td>
                         <td>Hipertensi Komplikasi</td>
-                        <td class="textCenter"><input name="lifestyle" type="checkbox" disabled></td>
-                        <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
                         <td class="textCenter">
-                            <button class="btn btn-primary-blue">Detail</button>
-                            <button class="btn btn-danger">Hapus</button>
+                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
+                        </td>
+                        <td class="textCenter">
+                            <h4 class="text-dark"><i class="fas fa-check-square"></i></h4>
+                        </td>
+
+                        <td class="textCenter">
+                            <button class="btn mb-1 btn-primary-blue">Detail</button>
+                            <button class="btn mb-1 btn-danger">Hapus</button>
                         </td>
                     </tr>
                     <tr>
                         <td class="textCenter">2</td>
-                        <td>Qurrota Nastiti Rizqita Aura Syifa</td>
+                        <td>Khusniah Arief</td>
                         <td>Hipertensi Komplikasi</td>
-                        <td class="textCenter"><input name="lifestyle" type="checkbox" disabled></td>
-                        <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
                         <td class="textCenter">
-                            <button class="btn btn-primary-blue">Detail</button>
-                            <button class="btn btn-danger">Hapus</button>
+                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
+                        </td>
+                        <td class="textCenter">
+                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
+                        </td>
+                        <td class="textCenter">
+                            <button class="btn mb-1 btn-primary-blue">Detail</button>
+                            <button class="btn mb-1 btn-danger">Hapus</button>
                         </td>
                     </tr>
                     <tr>
                         <td class="textCenter">2</td>
-                        <td>Qurrota Nastiti Rizqita Aura Syifa</td>
-                        <td>Hipertensi Komplikasi</td>
-                        <td class="textCenter"><input name="lifestyle" type="checkbox" disabled></td>
-                        <td class="textCenter"><input name="kepatuhan" type="checkbox" disabled checked></td>
+                        <td>Qurota Nastiti</td>
+                        <td>Hipertensi</td>
+
                         <td class="textCenter">
-                            <button class="btn btn-primary-blue">Detail</button>
-                            <button class="btn btn-danger">Hapus</button>
+                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
+                        </td>
+                        <td class="textCenter">
+                            <h4 class="text-dark"><i class="fas fa-check-square"></i></h4>
+                        </td>
+                        <td class="textCenter">
+                            <button class="btn mb-1 btn-primary-blue">Detail</button>
+                            <button class="btn mb-1 btn-danger">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="textCenter">2</td>
+                        <td>Eko rilo pembudi</td>
+                        <td>Hipertensi Komplikasi</td>
+                        <td class="textCenter">
+                            <h4 class="text-dark"><i class="fas fa-check-square"></i></h4>
+                        </td>
+                        <td class="textCenter">
+                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
+                        </td>
+                        <td class="textCenter">
+                            <button class="btn mb-1 btn-primary-blue">Detail</button>
+                            <button class="btn mb-1 btn-danger">Hapus</button>
                         </td>
                     </tr>
                 </table>
@@ -135,7 +176,7 @@
                             <div class="form-group">
                                 <textarea type="text" class="form-control bg-light" id="judul-lifestyle" placeholder="Pesan ..."></textarea>
                             </div>
-                            <button type="submit" class="btn float-right kirim-lifestyle">kirim</button>
+                            <button type="submit" class="btn float-right kirim-lifestyle">kirim <i class="fas fa-paper-plane ml-1"></i></button>
                         </form>
                     </div>
                 </div>

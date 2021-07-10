@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url('/konten/lifestyle/dashboard'); ?>" class="btn btn-primary card-footer text-center text-white">Lihat Pertanyaan >></a>
+                <a href="<?= base_url('/konten/lifestyle/dashboard'); ?>" class="btn btn-primary card-footer text-center text-white">Lihat Pertanyaan <i class="fas fa-angle-double-right ml-2"></i></a>
             </div>
         </div>
         <div class="col m-1">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url('/konten/kepatuhan/kuesionerkepatuhan'); ?>" class="btn btn-info card-footer text-center text-white">Lihat Pertanyaan >></a>
+                <a href="<?= base_url('/konten/kepatuhan/kuesionerkepatuhan'); ?>" class="btn btn-info card-footer text-center text-white">Lihat Pertanyaan<i class="fas fa-angle-double-right ml-2"></i></a>
             </div>
         </div>
 
