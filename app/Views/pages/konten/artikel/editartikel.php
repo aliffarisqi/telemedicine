@@ -14,7 +14,7 @@
 </div>
 <div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
     <div class="row">
-        <div class="col bg-light m-2 p-4">
+        <div class="col bg-light m-2 p-4 card">
             <form action="/Konten/artikel/artikel/updateprocess" method="POST" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <input type="hidden" name="id_konten" value="<?= $datakonten['id_konten']; ?>">

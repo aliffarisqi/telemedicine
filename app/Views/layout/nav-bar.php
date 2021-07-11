@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('/dashboard'); ?>">Dashboard</a>
+                    <a class="nav-link" href="<?= base_url('/dashboard/dashboard'); ?>">Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('/konten/konten'); ?>">Konten</a>

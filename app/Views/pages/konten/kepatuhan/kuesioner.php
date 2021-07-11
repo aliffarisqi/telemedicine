@@ -34,8 +34,8 @@
                                 <h3>Kuesioner Kepatuhan</h3>
                                 <hr>
                                 <div class="form-group">
-                                    <label for="email">Email address <b class="text-danger">*</b></label>
-                                    <input type="email" class="form-control form-kuesioner border-0 " id="email">
+                                    <label for="deskripsi">Deskripsi<b class="text-danger">*</b></label>
+                                    <input type="deskripsi" class="form-control form-kuesioner border-0 " id="deskripsi">
                                 </div>
                             </div>
                         </div>

@@ -36,74 +36,77 @@
                                     <a class="text-center float-right rounded btn btn-warning p-2 text-white">06 Juni 2021</a>
                                 </div>
                             </div>
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr class="text-info">
-                                            <th scope="col">No</th>
-                                            <th scope="col">Pasien</th>
-                                            <th scope="col">Pertanyaan 1</th>
-                                            <th scope="col">Pertanyaan 2</th>
-                                            <th scope="col">Pertanyaan 3</th>
-                                            <th scope="col">Pertanyaan 4</th>
-                                            <th scope="col">Pertanyaan 5</th>
-                                            <th scope="col">Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Khusniah Arief</td>
-                                            <td>4</td>
-                                            <td>5</td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>2</td>
-                                            <td class="bg-danger text-white"><b>14</b></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Muhammad Rilo</td>
-                                            <td>5</td>
-                                            <td>1</td>
-                                            <td>4</td>
-                                            <td>1</td>
-                                            <td>3</td>
-                                            <td class="bg-danger text-white"><b>13</b></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Bayu Alif Farisqi</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td class="bg-info text-white"><b>25</b></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>Rifqi Luthfi Naldi</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td class="bg-danger text-white"><b>23</b></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>Qurrot Nastiti</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td>5</td>
-                                            <td class="bg-info text-white"><b>25</b></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
+                            <div class="row">
+                                <div class="col">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr class="text-info">
+                                                    <th scope="col">No</th>
+                                                    <th scope="col">Pasien</th>
+                                                    <th scope="col">Pertanyaan 1</th>
+                                                    <th scope="col">Pertanyaan 2</th>
+                                                    <th scope="col">Pertanyaan 3</th>
+                                                    <th scope="col">Pertanyaan 4</th>
+                                                    <th scope="col">Pertanyaan 5</th>
+                                                    <th scope="col">Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Khusniah Arief</td>
+                                                    <td>4</td>
+                                                    <td>5</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td class="bg-danger text-white"><b>14</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Muhammad Rilo</td>
+                                                    <td>5</td>
+                                                    <td>1</td>
+                                                    <td>4</td>
+                                                    <td>1</td>
+                                                    <td>3</td>
+                                                    <td class="bg-danger text-white"><b>13</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Bayu Alif Farisqi</td>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td class="bg-info text-white"><b>25</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>Rifqi Luthfi Naldi</td>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td>4</td>
+                                                    <td>4</td>
+                                                    <td class="bg-danger text-white"><b>23</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>Qurrot Nastiti</td>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td class="bg-info text-white"><b>25</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

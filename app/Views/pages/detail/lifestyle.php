@@ -5,8 +5,8 @@
     <div class="container">
         <h5>
             <small>
-                <a href="<?= base_url('/dashboard'); ?>">Dashboard / </a>
-                <a href="<?= base_url('/detail/detail'); ?>">Detail Data Pasien / </a>
+                <a href="<?= base_url('/dashboard/dashboard'); ?>">Dashboard / </a>
+                <a href="<?= base_url('/dashboard/detail/detailpasien/' . $idpasien); ?>">Detail Data Pasien / </a>
             </small>
             Lifestyle
         </h5>

@@ -103,6 +103,9 @@ body {
   border-bottom: 1px solid orange;
   text-align: center;
 }
+.warna-abu-font {
+  color: rgb(99, 99, 99);
+}
 @media (max-width: 442px) {
   .space-mobile {
     height: 50px;

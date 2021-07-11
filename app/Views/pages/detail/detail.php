@@ -1,11 +1,28 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
+<?php
+$tanggal = new DateTime($datapasien['tanggal_lahir']);
+
+// tanggal hari ini
+$today = new DateTime('today');
+
+// tahun
+$y = $today->diff($tanggal)->y;
+
+// bulan
+$m = $today->diff($tanggal)->m;
+
+// hari
+$d = $today->diff($tanggal)->d;
+$usia = $y . " tahun " . $m . " bulan " . $d . " hari";
+?>
+
 <div class="header-dashboard pt-4 pb-2 bg-white">
     <div class="container">
         <h5>
             <small>
-                <a href="<?= base_url('/dashboard'); ?>">Dashboard / </a>
+                <a href="<?= base_url('/dashboard/dashboard'); ?>">Dashboard / </a>
             </small>
             Detail Data Pasien
         </h5>
@@ -26,11 +43,11 @@
             <div class="row mt-4">
                 <div class="col data-pasien-detail">
                     <h5>Nama</h5>
-                    <p>Mochamad Ridho</p>
+                    <p><?= $datapasien['nama']; ?></p>
                     <h5>Usia</h5>
-                    <p>20</p>
-                    <h5>BB/TB</h5>
-                    <p>50/155</p>
+                    <p><?= $usia; ?></p>
+                    <h5>TB/BB</h5>
+                    <p><?= $datapasien['tinggi_badan'] . '/' . $datapasien['berat_badan']; ?></p>
                 </div>
             </div>
             <div class="row m-2">
@@ -39,10 +56,10 @@
             </div>
             <hr>
             <div class="row m-2">
-                <a href="<?= base_url('/detail/lifestyle/edukasiperilaku/2'); ?>" class="btn btn-lifestyle">Lifestyle<i class="fas fa-calendar-check ml-2"></i></a>
+                <a href="<?= base_url('/dashboard/lifestyle/edukasiperilaku/' . $datapasien['id_pasien']); ?>" class="btn btn-lifestyle">Lifestyle<i class="fas fa-calendar-check ml-2"></i></a>
             </div>
             <div class="row m-2">
-                <a href="<?= base_url('/detail/lifestyle/edukasiperilaku/2'); ?>" class="btn btn-kepatuhan">Kepatuhan<i class="fas fa-calendar-check ml-2"></i></a>
+                <a href="<?= base_url('/dashboard/lifestyle/edukasiperilaku/2'); ?>" class="btn btn-kepatuhan">Kepatuhan<i class="fas fa-calendar-check ml-2"></i></a>
             </div>
         </div>
         <!-- right side monitoring -->
@@ -72,25 +89,29 @@
                             <a href="" class="btn btn-tambah-analisis float-right" data-toggle="modal" data-target="#modalLifestyle">+</a>
                         </div>
                     </div>
-
                     <!-- card analisis rekomendasi -->
-                    <div class="row pl-3 pr-3">
-                        <div class="card text-center card-analisis-rekomendasi" style="max-width: 18rem;">
-                            <div class="card-header header-card-analisis">
-                                05/06/2021
+                    <div class="row p-4">
+                        <?php if ($analisisrekomendasi) { ?>
+                            <div class="col">
+                                <div class="card-deck">
+                                    <?php foreach ($analisisrekomendasi as $ar) : ?>
+                                        <div class="card card-analisis-rekomendasi">
+                                            <div class="card-header header-card-analisis">
+                                                <?= $ar['tanggal_analisis']; ?>
+                                            </div>
+                                            <div class="card-body text-center">
+                                                <small class="text-right warna-orange"><?= $ar['judul']; ?></small>
+                                                <p class="card-text "><?= $ar['note_analisis']; ?></p>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <p class="card-text">Perbanyak Minum Air Putih</p>
+                        <?php } else { ?>
+                            <div class="col">
+                                <h5 class="warna-abu-font text-center"><i class="fas fa-folder mr-2"></i>belum ada data</h5>
                             </div>
-                        </div>
-                        <div class="card text-center card-analisis-rekomendasi" style="max-width: 18rem;">
-                            <div class="card-header header-card-analisis">
-                                07/06/2021
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">Kurangi Mengkonsumsi Gorengan</p>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -122,7 +143,7 @@
                             <tbody>
                                 <tr>
                                     <td>Nama</td>
-                                    <td>: Khusniah Arief</td>
+                                    <td>: <?= $datapasien['nama']; ?></td>
                                 </tr>
                                 <tr>
                                     <td>Puskesmas</td>
@@ -130,11 +151,11 @@
                                 </tr>
                                 <tr>
                                     <td>Usia</td>
-                                    <td>: 19 Tahun</td>
+                                    <td>: <?= $usia; ?></td>
                                 </tr>
                                 <tr>
-                                    <td>BB/TB</td>
-                                    <td>: 45/150</td>
+                                    <td>TB/BB</td>
+                                    <td>: <?= $datapasien['tinggi_badan'] . '/' . $datapasien['berat_badan']; ?></td>
                                 </tr>
                                 <tr>
                                     <td>Alergi</td>

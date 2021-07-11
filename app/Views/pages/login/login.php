@@ -17,17 +17,29 @@
             <div class="col-sm">
                 <div class="card shadow-sm card-login m-auto">
                     <div class="card-body">
-                        <h3 class=" text-center warna-orange mb-4"><b>LOG IN</b> </h3>
-                        <form action="<?= base_url('/dashboard'); ?>" class="mt-2">
-                            <div class="form-group input-login">
-                                <input type="email" class="form-control inputan" id="email" placeholder="email ...">
+                        <div class="row">
+                            <div class="col">
+                                <h3 class=" text-center warna-orange mb-4"><b>LOG IN</b> </h3>
                             </div>
-                            <div class="form-group input-login">
-                                <input type="password" class="form-control inputan " id="password" placeholder="password ...">
-                                <small><a href="" class="float-right">Lupa Password ?</a></small>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <form action="<?= base_url('/dashboard/dashboard'); ?>">
+                                    <div class="form-group input-login">
+                                        <input type="email" class="form-control inputan" id="email" placeholder="email ...">
+                                    </div>
+                                    <div class="form-group input-login">
+                                        <input type="password" class="form-control inputan " id="password" placeholder="password ...">
+                                        <div class="text-right">
+                                            <small><a href="" class="lupa-password">Lupa Password ?</a></small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button type="submit" class="btn bg-warna-orange btn-login"><b>Masuk</b></button>
+                                    </div>
+                                </form>
                             </div>
-                            <button type="submit" class="btn bg-warna-orange btn-login"><b>Masuk</b></button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

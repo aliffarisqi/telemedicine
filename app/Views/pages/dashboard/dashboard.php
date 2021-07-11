@@ -36,88 +36,30 @@
                     <tr class="tableHeader">
                         <th class="number textCenter">No</th>
                         <th>Nama</th>
-                        <th class="]tdStatus">Status</th>
+                        <th class="tdStatus">Status</th>
                         <th class="textCenter tdLifestyle">Lifestyle</th>
                         <th class="textCenter tdKepatuhan">Kepatuhan</th>
                         <th class="textCenter tdAksi">Aksi</th>
                     </tr>
-                    <tr>
-                        <td class="textCenter">1</td>
-                        <td>Muhammad Ridho</td>
-                        <td>Hipertensi</td>
-                        <td class="textCenter">
-                            <h4 class="text-dark"><i class="fas fa-check-square"></i></h4>
-                        </td>
-                        <td class="textCenter">
-                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
-                        </td>
-                        <td class="textCenter">
-                            <a href="<?= base_url('/detail/detail'); ?>" class="btn mb-1 btn-primary-blue">Detail</a>
-                            <button class="btn mb-1 btn-danger">Hapus</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="textCenter">2</td>
-                        <td>Rifqi luthfi Naldi</td>
-                        <td>Hipertensi Komplikasi</td>
-                        <td class="textCenter">
-                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
-                        </td>
-                        <td class="textCenter">
-                            <h4 class="text-dark"><i class="fas fa-check-square"></i></h4>
-                        </td>
+                    <?php $no = 1; ?>
+                    <?php foreach ($listpasien as $lp) : ?>
+                        <tr>
+                            <td class="textCenter"><?= $no++; ?></td>
+                            <td><?= $lp['nama']; ?></td>
+                            <td>Hipertensi</td>
+                            <td class="textCenter">
+                                <h4 class="text-dark"><i class="fas fa-check-square"></i></h4>
+                            </td>
+                            <td class="textCenter">
+                                <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
+                            </td>
+                            <td class="textCenter">
+                                <a href="<?= base_url('/dashboard/detail/detailpasien/' . $lp['id_pasien']); ?>" class="btn mb-1 btn-primary-blue">Detail</a>
+                                <button class="btn mb-1 btn-danger">Hapus</button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
 
-                        <td class="textCenter">
-                            <button class="btn mb-1 btn-primary-blue">Detail</button>
-                            <button class="btn mb-1 btn-danger">Hapus</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="textCenter">2</td>
-                        <td>Khusniah Arief</td>
-                        <td>Hipertensi Komplikasi</td>
-                        <td class="textCenter">
-                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
-                        </td>
-                        <td class="textCenter">
-                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
-                        </td>
-                        <td class="textCenter">
-                            <button class="btn mb-1 btn-primary-blue">Detail</button>
-                            <button class="btn mb-1 btn-danger">Hapus</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="textCenter">2</td>
-                        <td>Qurota Nastiti</td>
-                        <td>Hipertensi</td>
-
-                        <td class="textCenter">
-                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
-                        </td>
-                        <td class="textCenter">
-                            <h4 class="text-dark"><i class="fas fa-check-square"></i></h4>
-                        </td>
-                        <td class="textCenter">
-                            <button class="btn mb-1 btn-primary-blue">Detail</button>
-                            <button class="btn mb-1 btn-danger">Hapus</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="textCenter">2</td>
-                        <td>Eko rilo pembudi</td>
-                        <td>Hipertensi Komplikasi</td>
-                        <td class="textCenter">
-                            <h4 class="text-dark"><i class="fas fa-check-square"></i></h4>
-                        </td>
-                        <td class="textCenter">
-                            <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
-                        </td>
-                        <td class="textCenter">
-                            <button class="btn mb-1 btn-primary-blue">Detail</button>
-                            <button class="btn mb-1 btn-danger">Hapus</button>
-                        </td>
-                    </tr>
                 </table>
             </div>
 

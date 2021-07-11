@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Detail;
+namespace App\Controllers\Dashboard;
 
 use App\Controllers\BaseController;
 
@@ -10,21 +10,22 @@ class Lifestyle extends BaseController
     {
         return view('pages/detail/lifestyle');
     }
-    public function edukasiperilaku($tabel)
+    public function edukasiperilaku($id)
     {
         $data = [
-            'tabel' => 'edukasi perilaku'
+            'tabel' => 'edukasi perilaku',
+            'idpasien' => $id
         ];
         return view('pages/detail/lifestyle', $data);
     }
-    public function polamakan($tabel)
+    public function polamakan($id)
     {
         $data = [
             'tabel' => 'pola makan'
         ];
         return view('pages/detail/lifestyle', $data);
     }
-    public function perilakuolahraga($tabel)
+    public function perilakuolahraga($id)
     {
         $data = [
             'tabel' => 'perilaku olahraga'
