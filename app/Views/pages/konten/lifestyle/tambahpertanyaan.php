@@ -7,7 +7,7 @@
         <h5>
             <small>
                 <a href="<?= base_url('/konten/konten'); ?>">konten / </a>
-                <a href="<?= base_url('/konten/lifestyle/dashboard'); ?>">Pertanyaan Lifestyle / </a>
+                <a href="<?= base_url('/konten/lifestyle/lifestyle'); ?>">Pertanyaan Lifestyle / </a>
             </small>
             Tambah Pertanyaan
         </h5>
@@ -16,7 +16,7 @@
 <div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
     <div class="row">
         <div class="col bg-light m-2 p-4">
-            <form action="/Konten/Lifestyle/tambahpertanyaan/save" method="POST" enctype="multipart/form-data">
+            <form action="/Konten/Lifestyle/lifestyle/tambahpertanyaanproses" method="POST" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="form-group">
                     <label for="pertanyaanLifestyle" class="text-dark">
@@ -41,7 +41,7 @@
                 <div class="form-group row mb-3">
                     <div class="col float-right">
                         <button type="submit" class="btn btn-warna-orange float-right ml-2">Tambah</button>
-                        <a href="<?= base_url('/konten/lifestyle/dashboard'); ?>" class="btn btn-primary-blue float-right">Kembali</a>
+                        <a href="<?= base_url('/konten/lifestyle/lifestyle'); ?>" class="btn btn-primary-blue float-right">Kembali</a>
                     </div>
                 </div>
             </form>

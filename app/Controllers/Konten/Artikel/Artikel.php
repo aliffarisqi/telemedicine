@@ -73,9 +73,9 @@ class Artikel extends BaseController
         }
         date_default_timezone_set('Asia/Jakarta');
         $this->kontenModel->save([
-            'judul_konten' => $this->request->getVar('judulkonten'),
-            'publisher' => $this->request->getVar('publisher'),
-            'isi_konten' => $this->request->getVar('isiartikel'),
+            'judul_konten' => htmlspecialchars($this->request->getVar('judulkonten')),
+            'publisher' => htmlspecialchars($this->request->getVar('publisher')),
+            'isi_konten' => htmlspecialchars($this->request->getVar('isiartikel')),
             'tanggal_publish' => date('Y:m:d H:i:s'),
             'gambar_konten' => $namagambar
         ]);
@@ -84,6 +84,7 @@ class Artikel extends BaseController
     }
     public function update($id)
     {
+        session();
         $data = [
             'title' => 'tambah artikel',
             'datakonten' => $this->kontenModel->getKonten($id),
@@ -144,9 +145,9 @@ class Artikel extends BaseController
         date_default_timezone_set('Asia/Jakarta');
         $this->kontenModel->save([
             'id_konten' => $id,
-            'judul_konten' => $this->request->getVar('judulkonten'),
-            'publisher' => $this->request->getVar('publisher'),
-            'isi_konten' => $this->request->getVar('isiartikel'),
+            'judul_konten' => htmlspecialchars($this->request->getVar('judulkonten')),
+            'publisher' => htmlspecialchars($this->request->getVar('publisher')),
+            'isi_konten' => htmlspecialchars($this->request->getVar('isiartikel')),
             'tanggal_publish' => date('Y:m:d H:i:s'),
             'gambar_konten' => $namagambar
         ]);

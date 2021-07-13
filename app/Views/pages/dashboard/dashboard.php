@@ -10,6 +10,25 @@
     <div class="row ">
         <div class="col dashboard-content mt-2">
             <!-- Form Search -->
+            <div class="row">
+                <div class="col">
+                    <?php if (session()->getFlashdata('pesan')) { ?>
+                        <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+                            <?= session()->getFlashdata('pesan'); ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php } elseif (session()->getFlashdata('pesangagal')) { ?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <?= session()->getFlashdata('pesangagal'); ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
             <div class="row mb-4">
                 <div class="col">
                     <div class="row">
@@ -48,7 +67,7 @@
                             <td><?= $lp['nama']; ?></td>
                             <td>Hipertensi</td>
                             <td class="textCenter">
-                                <h4 class="text-dark"><i class="fas fa-check-square"></i></h4>
+                                <h4 class="text-secondary"><i class="far fa-check-square"></i></h4>
                             </td>
                             <td class="textCenter">
                                 <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
@@ -86,39 +105,31 @@
             <div class="modal-body pb-0">
                 <div class="row justify-content-center">
                     <div class="col-9 shadow-sm p-4">
-                        <form>
+                        <form action="/dashboard/dashboard/kirimpesan/" method="POST" enctype="multipart/form-data">
+                            <?= csrf_field(); ?>
                             <div class="form-group">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Penerima
+                                    <input class="form-check-input" type="checkbox" value="" id="select-all" name="select-all" onclick="toggle(this)">
+                                    <label class="form-check-label" for="checkall">
+                                        Untuk Semua Semua Pasien
                                     </label>
                                 </div>
                                 <div class="form-penerima-pesan bg-light p-4 border mt-2">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            Muhammad Ridho
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            Eko Rilo Pembudi
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        <label class="form-check-label" for="defaultCheck1">
-                                            Qurrota Nastiti
-                                        </label>
-                                    </div>
+                                    <input class="form-check-input" type="hidden" value="0" id="check1" name="pasienpenerima[]">
+                                    <?php foreach ($listpasien as $lp) : ?>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="<?= $lp['id_pasien']; ?>" id="check1" name="pasienpenerima[]">
+                                            <label class="form-check-label" for="check1">
+                                                <?= $lp['nama']; ?>
+                                            </label>
+                                        </div>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea type="text" class="form-control bg-light" id="judul-lifestyle" placeholder="Pesan ..."></textarea>
+                                <textarea type="text" class="form-control bg-light" id="judul-lifestyle" placeholder="Pesan ..." name="pesan" required></textarea>
                             </div>
-                            <button type="submit" class="btn float-right kirim-lifestyle">kirim <i class="fas fa-paper-plane ml-1"></i></button>
+                            <button type="submit" class="btn float-right btn-warna-orange">kirim <i class="fas fa-paper-plane ml-1"></i></button>
                         </form>
                     </div>
                 </div>
@@ -127,4 +138,13 @@
         </div>
     </div>
 </div>
+<script>
+    function toggle(source) {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i] != source)
+                checkboxes[i].checked = source.checked;
+        }
+    }
+</script>
 <?= $this->endSection(); ?>

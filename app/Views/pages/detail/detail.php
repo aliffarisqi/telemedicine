@@ -59,7 +59,7 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
                 <a href="<?= base_url('/dashboard/lifestyle/edukasiperilaku/' . $datapasien['id_pasien']); ?>" class="btn btn-lifestyle">Lifestyle<i class="fas fa-calendar-check ml-2"></i></a>
             </div>
             <div class="row m-2">
-                <a href="<?= base_url('/dashboard/lifestyle/edukasiperilaku/2'); ?>" class="btn btn-kepatuhan">Kepatuhan<i class="fas fa-calendar-check ml-2"></i></a>
+                <a href="<?= base_url('/dashboard/Kepatuhan/detailkepatuhan/' . $datapasien['id_pasien']); ?>" class="btn btn-kepatuhan">Kepatuhan<i class="fas fa-calendar-check ml-2"></i></a>
             </div>
         </div>
         <!-- right side monitoring -->
@@ -68,6 +68,9 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
             <div class="row m-3">
                 <div class="col title-monitoring-detail ">
                     <h4>Monitoring Pasien </h4>
+                </div>
+                <div class="col text-right">
+                    <a href="<?= base_url('/dashboard/hasil/hasiltekanandarah/' . $datapasien['id_pasien']); ?>" class="btn btn-light border-secondary text-dark">Hasil<i class="fa fa-table ml-2"></i></a>
                 </div>
             </div>
             <!-- card grafik -->
@@ -82,20 +85,33 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
             <div class="row m-3">
                 <div class="col bg-analisis-rekomendasi p-3">
                     <div class="row">
+                        <div class="col">
+                            <?php if (session()->getFlashdata('pesan')) : ?>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <?= session()->getFlashdata('pesan'); ?>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col title-analisis-rekomendasi">
                             <h5>Analisis dan Rekomendasi</h5>
                         </div>
                         <div class="col">
-                            <a href="" class="btn btn-tambah-analisis float-right" data-toggle="modal" data-target="#modalLifestyle">+</a>
+                            <a href="" class="btn btn-tambah-analisis float-right" data-toggle="modal" data-target="#modalAnalisis">+</a>
                         </div>
                     </div>
                     <!-- card analisis rekomendasi -->
                     <div class="row p-4">
                         <?php if ($analisisrekomendasi) { ?>
-                            <div class="col">
-                                <div class="card-deck">
-                                    <?php foreach ($analisisrekomendasi as $ar) : ?>
-                                        <div class="card card-analisis-rekomendasi">
+
+                            <?php foreach ($analisisrekomendasi as $ar) : ?>
+                                <div class="col-sm-4">
+                                    <div class="card-deck">
+                                        <div class="card mb-2">
                                             <div class="card-header header-card-analisis">
                                                 <?= $ar['tanggal_analisis']; ?>
                                             </div>
@@ -103,13 +119,20 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
                                                 <small class="text-right warna-orange"><?= $ar['judul']; ?></small>
                                                 <p class="card-text "><?= $ar['note_analisis']; ?></p>
                                             </div>
+                                            <div class="card-footer p-0 text-right">
+                                                <form action="/dashboard/detail/deleteanalisis/">
+                                                    <?= csrf_field(); ?>
+                                                    <input type="hidden" name="id_analisis" value="<?= $ar['id_analisis']; ?>">
+                                                    <button type="submit" class="btn text-danger " onclick="return confirm('apakah anda yakin ? ');"><i class="fa fa-trash"></i></button>
+                                                </form>
+                                            </div>
                                         </div>
-                                    <?php endforeach; ?>
+                                    </div>
                                 </div>
-                            </div>
+                            <?php endforeach; ?>
                         <?php } else { ?>
                             <div class="col">
-                                <h5 class="warna-abu-font text-center"><i class="fas fa-folder mr-2"></i>belum ada data</h5>
+                                <h5 class="warna-abu-font text-center"><i class="far fa-folder-open mr-2"></i>belum ada data</h5>
                             </div>
                         <?php } ?>
                     </div>
@@ -196,7 +219,7 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
 </div>
 
 <!-- Modal Lainya -->
-<div class="modal fade" id="modalLifestyle" tabindex="-1" aria-labelledby="modalLifestyleLabel" aria-hidden="true">
+<div class="modal fade" id="modalAnalisis" tabindex="-1">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="row">
@@ -214,14 +237,18 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
             <div class="modal-body pb-0">
                 <div class="row justify-content-center">
                     <div class="col-9 shadow-sm p-4">
-                        <form>
+                        <form action="/dashboard/detail/tambahanalisis/" method="POST" enctype="multipart/form-data">
+                            <?= csrf_field(); ?>
+                            <input type="hidden" name="iddatapasien" value="<?= $datapasien['id_data_pasien']; ?>">
                             <div class="form-group">
-                                <input type="text" class="form-control inputan-judul-lifestyle bg-light" id="judul-lifestyle" placeholder="Judul ...">
+                                <input type="text" class="form-control inputan-judul-lifestyle bg-light" id="judul-lifestyle" placeholder="Judul ..." name="judul" maxlength="20" required>
+                                <small class="text-info text-right">maksimal 20 karakter</small>
                             </div>
                             <div class="form-group">
-                                <textarea type="text" class="form-control inputan-pesan-lifestyle bg-light" id="judul-lifestyle" placeholder="Pesan ..."></textarea>
+                                <textarea type="text" class="form-control inputan-pesan-lifestyle bg-light" id="judul-lifestyle" placeholder="Pesan ..." name="noteanalisis" maxlength="50" required></textarea>
+                                <small class="text-info text-right">maksimal 50 karakter</small>
                             </div>
-                            <button type="submit" class="btn float-right kirim-lifestyle">kirim</button>
+                            <button type="submit" class="btn float-right btn-warna-orange">kirim</button>
                         </form>
                     </div>
                 </div>

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/style/style.css">
     <script src="https://kit.fontawesome.com/29db7506e4.js" crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <title>Document</title>
+    <title><?= $title; ?></title>
 </head>
 
 <body>

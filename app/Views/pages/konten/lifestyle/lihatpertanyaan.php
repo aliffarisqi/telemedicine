@@ -7,7 +7,7 @@
         <h5>
             <small>
                 <a href="<?= base_url('/konten/konten'); ?>">Konten / </a>
-                <a href="<?= base_url('/konten/lifestyle/dashboard'); ?>">Pertanyaan Lifestyle / </a>
+                <a href="<?= base_url('/konten/lifestyle/lifestyle'); ?>">Pertanyaan Lifestyle / </a>
             </small>
             Detail Pertanyaan
         </h5>
@@ -31,8 +31,8 @@
                 </div>
             </form>
             <hr class="mt-4 mb-4">
-            <a href="<?= base_url('/konten/lifestyle/editpertanyaan/update/' . $pertanyaanlifestyle['id_datalifestyle']); ?>" class="btn btn-info float-right ml-2">Edit</a>
-            <a href="<?= base_url('/konten/lifestyle/dashboard'); ?>" class="btn btn-primary-blue float-right">Kembali</a>
+            <a href="<?= base_url('/konten/lifestyle/lifestyle/update/' . $pertanyaanlifestyle['id_datalifestyle']); ?>" class="btn btn-info float-right ml-2">Edit</a>
+            <a href="<?= base_url('/konten/lifestyle/lifestyle'); ?>" class="btn btn-primary-blue float-right">Kembali</a>
         </div>
     </div>
 </div>

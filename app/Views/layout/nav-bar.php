@@ -19,7 +19,7 @@
                     <a class="nav-link" href="<?= base_url('/konten/konten'); ?>">Konten</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('/'); ?>">Pengaturan</a>
+                    <a class="nav-link" href="<?= base_url('/pengaturan/pengaturanadmin'); ?>">Pengaturan</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('/'); ?>">Keluar<i class="fas fa-sign-out-alt ml-2"></i></a>

@@ -13,6 +13,7 @@ class Lifestyle extends BaseController
     public function edukasiperilaku($id)
     {
         $data = [
+            'title' => 'Lifestyle',
             'tabel' => 'edukasi perilaku',
             'idpasien' => $id
         ];

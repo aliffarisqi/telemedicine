@@ -13,6 +13,12 @@
     </div>
 </div>
 <div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
+    <div class="row ">
+        <div class="col text-center">
+            <h5>Data Lifestyle Pasien</h5>
+        </div>
+    </div>
+    <hr>
     <div class="row mb-4 ">
         <div class="col-sm-1 text-center pl-3 mr-0 pr-0">
             <h1><i class="fas fa-user-circle"></i></h1>

@@ -7,49 +7,75 @@
     </div>
 </div>
 <div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
-    <div class="row">
-        <div class="col m-1">
+    <div class="row row-cols-1 row-cols-md-3 pb-4">
+        <!-- check list -->
+        <div class="col-sm mb-1">
             <div class="card bg-primary text-white">
                 <div class="card-body p-2">
                     <div class="row justify-content-center ">
-                        <div class="col-7 ">
+                        <div class="col-6 ">
                             <div class="row p-2">
                                 <img src="/img/checklist.png" alt="" class="img-card-lifestyle">
                             </div>
                             <div class="row">
-                                <h4 class="card-title">Checklist Lifestyle</h4>
+                                <h5 class="card-title ml-1">Checklist Lifestyle</h5>
                             </div>
                         </div>
-                        <div class="col-4 text-center">
+                        <div class="col-5 text-center">
                             <h3 class="jumlah-pertanyaan m-0"><?= $datalifestyle; ?></h3>
                             <h6 class="text-center m-0">Pertanyaan</h6>
-                            <a href="<?= base_url('/konten/lifestyle/tambahpertanyaan'); ?>" class="btn btn-danger rounded m-2"><small> Tambah +</small></a>
+                            <a href="<?= base_url('/konten/lifestyle/lifestyle/tambahpertanyaan'); ?>" class="btn btn-danger rounded m-2"><small> Tambah +</small></a>
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url('/konten/lifestyle/dashboard'); ?>" class="btn btn-primary card-footer text-center text-white">Lihat Pertanyaan <i class="fas fa-angle-double-right ml-2"></i></a>
+                <a href="<?= base_url('/konten/lifestyle/lifestyle'); ?>" class="btn btn-primary card-footer text-center text-white">Lihat Lifestyle <i class="fas fa-angle-double-right ml-2"></i></a>
             </div>
         </div>
-        <div class="col m-1">
+        <!-- Kepatuhan -->
+        <div class="col-sm mb-1">
             <div class="card bg-info text-white">
                 <div class="card-body p-2">
                     <div class="row justify-content-center ">
-                        <div class="col-7 ">
+                        <div class="col-6 ">
                             <div class="row p-2">
                                 <img src="/img/kepatuhan.png" alt="" class="img-card-kepatuhan">
                             </div>
                             <div class="row">
-                                <h4 class="card-title">Kepatuhan</h4>
+                                <h5 class="card-title ml-1">Kepatuhan</h5>
                             </div>
                         </div>
-                        <div class="col-4 text-center">
-                            <h3 class="jumlah-pertanyaan m-0">5</h3>
+                        <div class="col-5 text-center">
+                            <h3 class="jumlah-pertanyaan m-0"><?= $datakuesioner; ?></h3>
                             <h6 class="text-center m-0">Pertanyaan</h6>
                             <a href="<?= base_url('/konten/kepatuhan/kuesionerkepatuhan'); ?>" class="btn btn-danger rounded m-2"><small> Tambah +</small></a>
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url('/konten/kepatuhan/kuesionerkepatuhan'); ?>" class="btn btn-info card-footer text-center text-white">Lihat Pertanyaan<i class="fas fa-angle-double-right ml-2"></i></a>
+                <a href="<?= base_url('/konten/kepatuhan/kuesionerkepatuhan'); ?>" class="btn btn-info card-footer text-center text-white">Lihat Kepatuhan<i class="fas fa-angle-double-right ml-2"></i></a>
+            </div>
+        </div>
+
+        <!-- OBAT -->
+        <div class="col-sm mb-1">
+            <div class="card bg-secondary text-white">
+                <div class="card-body p-2">
+                    <div class="row justify-content-center ">
+                        <div class="col-6 ">
+                            <div class="row p-2">
+                                <img src="/img/obat.png" alt="" class="img-card-lifestyle">
+                            </div>
+                            <div class="row">
+                                <h5 class="card-title ml-1">Daftar Obat</h4>
+                            </div>
+                        </div>
+                        <div class="col-5 text-center">
+                            <h3 class="jumlah-pertanyaan m-0"><?= $dataobat; ?></h3>
+                            <h6 class="text-center m-0">Jenis obat</h6>
+                            <a href="<?= base_url('/konten/obat/daftarobat/tambahobat'); ?>" class="btn btn-danger rounded m-2"><small> Tambah +</small></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="<?= base_url('/konten/obat/daftarobat'); ?>" class="btn btn-secondary card-footer text-center text-white">Lihat Daftar <i class="fas fa-angle-double-right ml-2"></i></a>
             </div>
         </div>
 
@@ -66,13 +92,13 @@
             <?php endif; ?>
             <div class="row">
                 <div class="col">
-                    <h5 class="judul-konten-edukasi">Kontent Edukasi</h5>
+                    <h5 class="judul-konten-edukasi">Artikel Edukasi</h5>
                 </div>
                 <div class="col">
                     <a href="<?= base_url('/konten/artikel/artikel'); ?>" class="btn btn-tambah-konten">Tambah artikel</a>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 mt-4">
+            <div class="row row-cols-1 row-cols-md-2 mt-4">
                 <?php foreach ($kontenartikel as $ka) : ?>
                     <div class="col mb-4">
                         <div class="card">

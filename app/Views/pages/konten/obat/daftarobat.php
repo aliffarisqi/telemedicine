@@ -8,7 +8,7 @@
             <small>
                 <a href="<?= base_url('/konten/konten'); ?>">Konten</a>
             </small>
-            / Pertanyaan Lifestyle
+            / Daftar Obat
         </h5>
     </div>
 </div>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="col float left">
-                    <a href="<?= base_url('/konten/lifestyle/lifestyle/tambahpertanyaan/'); ?>" class="btn btn-warna-orange float-right">Tambah Pertanyaan</a>
+                    <a href="<?= base_url('/konten/obat/daftarobat/tambahobat'); ?>" class="btn btn-warna-orange float-right">Tambah Obat</a>
                 </div>
             </div>
             <div class="row">
@@ -51,22 +51,19 @@
                         <thead class="bg-table-lifestyle">
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Pertanyaan</th>
-                                <th scope="col">Jenis</th>
+                                <th scope="col">Nama Obat</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php $i = 1; ?>
-                            <?php foreach ($datapertanyaanlifestyle as $dpl) : ?>
+                            <?php foreach ($dataobat as $do) : ?>
                                 <tr>
                                     <th scope="row"><?= $i++; ?></th>
-                                    <td><?= $dpl['data_pertanyaan']; ?></td>
-                                    <td><?= $dpl['jenis_pertanyaan']; ?></td>
+                                    <td><?= $do['nama_obat']; ?></td>
                                     <td class="text-center">
-                                        <a href="<?= base_url('/konten/lifestyle/lifestyle/detail/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-primary-blue">Detail</a>
-                                        <a href="<?= base_url('/konten/lifestyle/lifestyle/update/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-info">Edit</a>
-                                        <a href="<?= base_url('/konten/lifestyle/lifestyle/delete/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-danger" onclick="return confirm('apakah anda yakin Untuk Menghapus Pertanyaan ini ? ');">Delete</a>
+                                        <a href="<?= base_url('/konten/obat/daftarobat/update/' . $do['id_obat']); ?>" class="mb-2 btn btn-info">Edit</a>
+                                        <a href="<?= base_url('/konten/obat/daftarobat/delete/' . $do['id_obat']); ?>" class="mb-2 btn btn-danger" onclick="return confirm('apakah anda yakin Untuk Menghapus Pertanyaan ini ? ');">Delete</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

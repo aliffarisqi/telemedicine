@@ -7,7 +7,7 @@
         <h5>
             <small>
                 <a href="<?= base_url('/konten/konten'); ?>">Konten / </a>
-                <a href="<?= base_url('/konten/lifestyle/dashboard'); ?>">Pertanyaan Lifestyle / </a>
+                <a href="<?= base_url('/konten/lifestyle/lifestyle'); ?>">Pertanyaan Lifestyle / </a>
             </small>
             Edit Pertanyaan
         </h5>
@@ -16,14 +16,14 @@
 <div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
     <div class="row">
         <div class="col bg-light m-2 p-4">
-            <form action="/konten/lifestyle/editpertanyaan/updateprocess" method="POST" enctype="multipart/form-data">
+            <form action="/konten/lifestyle/lifestyle/updateprocess" method="POST" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <input type="hidden" value="<?= $pertanyaanlifestyle['id_datalifestyle']; ?>" name="id">
                 <div class="form-group">
                     <label for="pertanyaanLifestyle" class="text-dark">
                         <h5>Pertanyaan</h5>
                     </label>
-                    <input type="text" class="form-control <?= ($validation->hasError('pertanyaan')) ? 'is-invalid' : ''; ?>"" id=" pertanyaanLifestyle" value="<?= (old('pertanyaan')) ? old('pertanyaan') : $pertanyaanlifestyle['data_pertanyaan']; ?>" name="pertanyaan">
+                    <input type="text" class="form-control <?= ($validation->hasError('pertanyaan')) ? 'is-invalid' : ''; ?>" id=" pertanyaanLifestyle" value="<?= (old('pertanyaan')) ? old('pertanyaan') : $pertanyaanlifestyle['data_pertanyaan']; ?>" name="pertanyaan">
                     <div class="invalid-feedback">
                         <?= $validation->getError('pertanyaan'); ?>
                     </div>
@@ -46,7 +46,7 @@
                 <div class="form-group row mb-3">
                     <div class="col float-right">
                         <button type="submit" class="btn btn-info float-right ml-2">Save</button>
-                        <a href="<?= base_url('/konten/lifestyle/dashboard'); ?>" class="btn btn-primary-blue float-right">Kembali</a>
+                        <a href="<?= base_url('/konten/lifestyle/lifestyle'); ?>" class="btn btn-primary-blue float-right">Kembali</a>
                     </div>
                 </div>
             </form>
