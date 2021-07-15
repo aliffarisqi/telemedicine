@@ -1,0 +1,14 @@
+.card-puskesmas {
+  height: 160px;
+  width: 200px;
+}
+.card-img-puskesmas {
+  height: 65px;
+  margin-top: 6%;
+  margin-bottom: 4%;
+}
+@media (max-width: 600px) {
+  .card-puskesmas {
+    width: 300px;
+  }
+}

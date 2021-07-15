@@ -16,4 +16,14 @@ class ObatModels extends Model
         }
         return $this->where(['id_obat' => $id])->first();
     }
+    public function search($keyword)
+    {
+        // $builder = $this->table('obat');
+        // $builder->like('nama_obat', $keyword);
+        // $builder->like('what', $keyword);
+        // return $builder;
+
+        return $this->table('obat')->like('nama_obat', $keyword);
+        // ->orLike('what', $keyword)
+    }
 }

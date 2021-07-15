@@ -170,7 +170,7 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
                                 </tr>
                                 <tr>
                                     <td>Puskesmas</td>
-                                    <td>: Danasari</td>
+                                    <td>: <?= $namapuskesmas; ?></td>
                                 </tr>
                                 <tr>
                                     <td>Usia</td>

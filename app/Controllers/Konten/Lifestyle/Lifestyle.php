@@ -19,9 +19,19 @@ class Lifestyle extends BaseController
     }
     public function index()
     {
+        session();
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $pertanyaan = $this->dataPertanyaan->search($keyword);
+        } else {
+            $pertanyaan = $this->dataPertanyaan;
+        }
+        $currentPage = $this->request->getVar('page_data_lifestyle') ? $this->request->getVar('page_data_lifestyle') : 1;
         $data = [
             'title' => 'Lifestyle',
-            'datapertanyaanlifestyle' => $this->dataPertanyaan->getDataPertanyaanLifestyle()
+            'datapertanyaanlifestyle' => $pertanyaan->paginate(5, 'data_lifestyle'),
+            'pager' => $this->dataPertanyaan->pager,
+            'currentpage' => $currentPage
         ];
         return view('pages\konten\lifestyle\dashboard', $data);
     }

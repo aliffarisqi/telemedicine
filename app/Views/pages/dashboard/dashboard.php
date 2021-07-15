@@ -60,25 +60,30 @@
                         <th class="textCenter tdKepatuhan">Kepatuhan</th>
                         <th class="textCenter tdAksi">Aksi</th>
                     </tr>
-                    <?php $no = 1; ?>
-                    <?php foreach ($listpasien as $lp) : ?>
-                        <tr>
-                            <td class="textCenter"><?= $no++; ?></td>
-                            <td><?= $lp['nama']; ?></td>
-                            <td>Hipertensi</td>
-                            <td class="textCenter">
-                                <h4 class="text-secondary"><i class="far fa-check-square"></i></h4>
-                            </td>
-                            <td class="textCenter">
-                                <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
-                            </td>
-                            <td class="textCenter">
-                                <a href="<?= base_url('/dashboard/detail/detailpasien/' . $lp['id_pasien']); ?>" class="btn mb-1 btn-primary-blue">Detail</a>
-                                <button class="btn mb-1 btn-danger">Hapus</button>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-
+                    <?php if ($listpasien) { ?>
+                        <?php $no = 1; ?>
+                        <?php foreach ($listpasien as $lp) : ?>
+                            <tr>
+                                <td class="textCenter"><?= $no++; ?></td>
+                                <td><?= $lp['nama']; ?></td>
+                                <td>Hipertensi</td>
+                                <td class="textCenter">
+                                    <h4 class="text-secondary"><i class="far fa-check-square"></i></h4>
+                                </td>
+                                <td class="textCenter">
+                                    <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
+                                </td>
+                                <td class="textCenter">
+                                    <a href="<?= base_url('/dashboard/detail/detailpasien/' . $lp['id_pasien']); ?>" class="btn mb-1 btn-primary-blue">Detail</a>
+                                    <button class="btn mb-1 btn-danger">Hapus</button>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php } else { ?>
+                        <div class="col">
+                            <h5 class="warna-abu-font text-center"><i class="far fa-folder-open mr-2"></i>belum ada data</h5>
+                        </div>
+                    <?php } ?>
                 </table>
             </div>
 

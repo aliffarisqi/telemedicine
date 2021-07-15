@@ -52,8 +52,10 @@ class KuesionerKepatuhan extends BaseController
         }
 
         //memasukan data ke database
+        $kode = $this->daftarkuesioner->first();
         $this->daftarkuesioner->save([
-            'nama_pertanyaan' => htmlspecialchars($this->request->getVar('pertanyaankuesioner'))
+            'nama_pertanyaan' => htmlspecialchars($this->request->getVar('pertanyaankuesioner')),
+            'kode' => $kode['kode']
         ]);
         session()->setFlashdata('pesan', 'Data pertanyaan berhasil ditambahkan');
         return redirect()->to('/konten/kepatuhan/kuesionerkepatuhan');
@@ -93,6 +95,18 @@ class KuesionerKepatuhan extends BaseController
     {
         $this->daftarkuesioner->delete($id);
         session()->setFlashdata('pesan', 'Data Kuesioner berhasil di Delete');
+        return redirect()->to('/konten/kepatuhan/kuesionerkepatuhan');
+    }
+    public function kirimkuesioner()
+    {
+        $id = $this->daftarkuesioner->getKuesioner();
+        foreach ($id as $i) :
+            $this->daftarkuesioner->save([
+                'id_kuesioner' => $i['id_kuesioner'],
+                'kode' => $i['kode'] + 1,
+            ]);
+        endforeach;
+        session()->setFlashdata('pesan', 'kuesioner Berhasil di kirim');
         return redirect()->to('/konten/kepatuhan/kuesionerkepatuhan');
     }
 }

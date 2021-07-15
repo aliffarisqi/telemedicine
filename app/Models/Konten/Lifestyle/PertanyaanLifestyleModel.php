@@ -17,4 +17,8 @@ class PertanyaanLifestyleModel extends Model
         }
         return $this->where(['id_datalifestyle' => $idLifestyle])->first();
     }
+    public function search($keyword)
+    {
+        return $this->table('data_lifestyle')->like('data_pertanyaan', $keyword)->orLike('jenis_pertanyaan', $keyword);
+    }
 }

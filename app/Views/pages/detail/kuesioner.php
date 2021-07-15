@@ -26,7 +26,7 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
 <div class="container bg-white mt-4 p-4 mb-4 shadow-sm">
     <div class="row ">
         <div class="col text-center">
-            <h5>Data Lifestyle Pasien</h5>
+            <h5>Data Kepatuhan Pasien</h5>
         </div>
     </div>
     <hr>
@@ -62,7 +62,7 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
                 <?php foreach ($kuesionerpasien as $kp) : ?>
                     <tr>
                         <th scope="row" class="text-center"><?= $num++; ?></th>
-                        <td class="text-left"><?= $kp['idpertanyaan']; ?></td>
+                        <td class="text-left"><?= $kp['id_kuesioner']; ?></td>
                         <td><?= $kp['hasil']; ?></td>
                         <td>tidak</td>
                         <td></td>

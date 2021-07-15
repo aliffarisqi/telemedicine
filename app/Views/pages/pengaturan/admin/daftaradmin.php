@@ -28,21 +28,19 @@
                 <div class="col">
                     <div class="row">
                         <div class="col">
-                            <form>
-                                <div class="row">
-                                    <div class="col-9">
-                                        <input class="form-control m-0" type="search" placeholder="Search">
+                            <form method="POST">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-primary-blue" type="submit" id="button-addon1"><i class="fas fa-search"></i></button>
                                     </div>
-                                    <div class="col-3">
-                                        <button class="btn btn-primary-blue" type="submit"><i class="fas fa-search"></i></button>
-                                    </div>
+                                    <input type="text" class="form-control" placeholder="cari admin ..." aria-label="Example text with button addon" aria-describedby="button-addon1" name="keyword">
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="col float left">
-                    <a href="<?= base_url('/konten/obat/daftarobat/tambahobat'); ?>" class="btn btn-warna-orange float-right">Tambah admin</a>
+                    <a href="<?= base_url('/pengaturan/admin/daftaradmin/tambah'); ?>" class="btn btn-warna-orange float-right">Tambah admin</a>
                 </div>
             </div>
             <div class="row">
@@ -57,42 +55,37 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Bayu Alif Farisqi</td>
-                                <td>super admin</td>
-                                <td class="text-center">
-                                    <a href="" class="btn btn-primary-blue">Detail</a>
-                                    <a href="" class="btn btn-info">info</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Rifqi Luthfi Naldi</td>
-                                <td>super admin</td>
-                                <td class="text-center">
-                                    <a href="" class="btn btn-primary-blue">Detail</a>
-                                    <a href="" class="btn btn-info">info</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Qurrota Nastiti</td>
-                                <td>admin</td>
-                                <td class="text-center">
-                                    <a href="" class="btn btn-primary-blue">Detail</a>
-                                    <a href="" class="btn btn-info">info</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
-                                </td>
-                            </tr>
+                            <?php if ($dataadmin) { ?>
+                                <?php $num = 1 + (5 * ($currentpage - 1));; ?>
+                                <?php foreach ($dataadmin as $da) : ?>
+                                    <tr>
+                                        <td><?= $num++; ?></td>
+                                        <td><?= $da['username_admin']; ?></td>
+                                        <td><?= $da['status']; ?></td>
+                                        <td class="text-center">
+                                            <a href="<?= base_url('pengaturan/admin/daftaradmin/detail/' . $da['id_admin']); ?>" class="btn btn-primary-blue">Detail</a>
+                                            <a href="<?= base_url('pengaturan/admin/daftaradmin/update/' . $da['id_admin']); ?>" class="btn btn-info">Edit</a>
+                                            <a href="" class="btn btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php } else { ?>
+                                <tr>
+                                    <td colspan="4" class="p-5">
+                                        <h5 class="warna-abu-font text-center"><i class="far fa-folder-open mr-2"></i>belum ada data</h5>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
+                    <div class="row">
+                        <div class="col">
+                            <?= $pager->links('admin', 'pager_satu'); ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <?= $this->endSection(); ?>

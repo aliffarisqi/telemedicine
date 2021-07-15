@@ -8,7 +8,7 @@ class KuesionerModels extends Model
 {
     protected $table = 'kuesioner';
     protected $primaryKey = 'id_kuesioner';
-    protected $allowedFields = ['nama_pertanyaan'];
+    protected $allowedFields = ['nama_pertanyaan', 'kode'];
     public function getKuesioner($id = false)
     {
         if ($id == false) {

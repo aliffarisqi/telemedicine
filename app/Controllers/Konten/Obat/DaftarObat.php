@@ -14,9 +14,18 @@ class DaftarObat extends BaseController
     }
     public function index()
     {
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $obat = $this->dataObat->search($keyword);
+        } else {
+            $obat = $this->dataObat;
+        }
+        $currentPage = $this->request->getVar('page_obat') ? $this->request->getVar('page_obat') : 1;
         $data = [
             'title' => 'Daftar Obat',
-            'dataobat' => $this->dataObat->getObat()
+            'dataobat' => $obat->paginate(5, 'obat'),
+            'pager' => $this->dataObat->pager,
+            'currentpage' => $currentPage
         ];
         return view('pages\konten\obat\daftarobat', $data);
     }

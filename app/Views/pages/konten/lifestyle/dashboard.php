@@ -28,14 +28,12 @@
                 <div class="col">
                     <div class="row">
                         <div class="col">
-                            <form>
-                                <div class="row">
-                                    <div class="col-9">
-                                        <input class="form-control m-0" type="search" placeholder="Search">
+                            <form method="POST">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-primary-blue" type="submit" id="button-addon1"><i class="fas fa-search"></i></button>
                                     </div>
-                                    <div class="col-3">
-                                        <button class="btn btn-primary-blue" type="submit"><i class="fas fa-search"></i></button>
-                                    </div>
+                                    <input type="text" class="form-control" placeholder="cari pertanyaan ..." aria-label="Example text with button addon" aria-describedby="button-addon1" name="keyword">
                                 </div>
                             </form>
                         </div>
@@ -57,21 +55,35 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $i = 1; ?>
-                            <?php foreach ($datapertanyaanlifestyle as $dpl) : ?>
+                            <?php if ($datapertanyaanlifestyle) { ?>
+                                <?php $i = 1 + (5 * ($currentpage - 1));; ?>
+                                <?php foreach ($datapertanyaanlifestyle as $dpl) : ?>
+                                    <tr>
+                                        <th scope="row"><?= $i++; ?></th>
+                                        <td><?= $dpl['data_pertanyaan']; ?></td>
+                                        <td><?= $dpl['jenis_pertanyaan']; ?></td>
+                                        <td class="text-center">
+                                            <a href="<?= base_url('/konten/lifestyle/lifestyle/detail/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-primary-blue">Detail</a>
+                                            <a href="<?= base_url('/konten/lifestyle/lifestyle/update/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-info">Edit</a>
+                                            <a href="<?= base_url('/konten/lifestyle/lifestyle/delete/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-danger" onclick="return confirm('apakah anda yakin Untuk Menghapus Pertanyaan ini ? ');">Delete</a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php } else { ?>
                                 <tr>
-                                    <th scope="row"><?= $i++; ?></th>
-                                    <td><?= $dpl['data_pertanyaan']; ?></td>
-                                    <td><?= $dpl['jenis_pertanyaan']; ?></td>
-                                    <td class="text-center">
-                                        <a href="<?= base_url('/konten/lifestyle/lifestyle/detail/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-primary-blue">Detail</a>
-                                        <a href="<?= base_url('/konten/lifestyle/lifestyle/update/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-info">Edit</a>
-                                        <a href="<?= base_url('/konten/lifestyle/lifestyle/delete/' . $dpl['id_datalifestyle']); ?>" class="mb-2 btn btn-danger" onclick="return confirm('apakah anda yakin Untuk Menghapus Pertanyaan ini ? ');">Delete</a>
+                                    <td colspan="8" class="p-5">
+                                        <h5 class="text-center warna-abu-font"><i class="far fa-folder-open mr-2"></i>Belum Ada Data</h5>
                                     </td>
                                 </tr>
-                            <?php endforeach; ?>
+                            <?php } ?>
                         </tbody>
+
                     </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <?= $pager->links('data_lifestyle', 'pager_satu'); ?>
                 </div>
             </div>
         </div>

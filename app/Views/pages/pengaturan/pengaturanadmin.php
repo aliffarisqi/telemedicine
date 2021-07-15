@@ -24,11 +24,11 @@
                         <div class="col-5 text-center">
                             <h3 class="jumlah-pertanyaan m-0">4</h3>
                             <h6 class="text-center m-0">Puskesmas</h6>
-                            <a href="<?= base_url('/konten/lifestyle/lifestyle/tambahpertanyaan'); ?>" class="btn btn-light rounded m-2 text-dark"><small> Tambah +</small></a>
+                            <a href="<?= base_url('/pengaturan/puskesmas/daftarpuskesmas/tambahpuskesmas'); ?>" class="btn btn-light rounded m-2 text-dark"><small> Tambah +</small></a>
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url('/konten/lifestyle/lifestyle'); ?>" class="btn btn-danger card-footer text-center text-white">Lihat puskesmas <i class="fas fa-angle-double-right ml-2"></i></a>
+                <a href="<?= base_url('/pengaturan/puskesmas/daftarpuskesmas'); ?>" class="btn btn-danger card-footer text-center text-white">Lihat puskesmas <i class="fas fa-angle-double-right ml-2"></i></a>
             </div>
         </div>
         <!-- Kepatuhan -->
@@ -47,11 +47,11 @@
                         <div class="col-5 text-center">
                             <h3 class="jumlah-pertanyaan m-0">5</h3>
                             <h6 class="text-center m-0">Admin</h6>
-                            <a href="<?= base_url('/konten/kepatuhan/kuesionerkepatuhan'); ?>" class="btn btn-light text-dark rounded m-2"><small> Tambah +</small></a>
+                            <a href="<?= base_url('/pengaturan/admin/daftaradmin/tambah'); ?>" class="btn btn-light text-dark rounded m-2"><small> Tambah +</small></a>
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url('/pengaturan/daftaradmin'); ?>" class="btn btn-info card-footer text-center text-white">Lihat Admin<i class="fas fa-angle-double-right ml-2"></i></a>
+                <a href="<?= base_url('/pengaturan/admin/daftaradmin'); ?>" class="btn btn-info card-footer text-center text-white">Lihat Admin<i class="fas fa-angle-double-right ml-2"></i></a>
             </div>
         </div>
         <!-- OBAT -->
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-    <div class="p-4"></div>
+    <div class="p-5"></div>
     <div class="p-4"></div>
 </div>
 </div>

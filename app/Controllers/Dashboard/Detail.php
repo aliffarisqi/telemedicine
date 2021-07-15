@@ -5,22 +5,29 @@ namespace App\Controllers\Dashboard;
 use App\Controllers\BaseController;
 use App\Models\Dashboard\Dashboard\ListPasienModel;
 use App\Models\Dashboard\Detail\AnalisisRekomendasiModels;
+use App\Models\Pengaturan\Puskesmas\PuskesmasModels;
 
 class Detail extends BaseController
 {
     protected $listPasien;
     protected $analisisRekomendasi;
+    protected $dataPuskesmas;
     public function __construct()
     {
         $this->listPasien = new ListPasienModel();
         $this->analisisRekomendasi = new AnalisisRekomendasiModels();
+        $this->dataPuskesmas = new PuskesmasModels();
     }
     public function detailPasien($id)
     {
         session();
+        $datapasien = $this->listPasien->getListPasien($id);
+        $idpuskesmas = $datapasien['id_puskesmas'];
+        $namapuskesmas = $this->dataPuskesmas->getPuskesmas($idpuskesmas);
         $data = [
             'title' => 'Data Pasien',
-            'datapasien' => $this->listPasien->getListPasien($id),
+            'datapasien' => $datapasien,
+            'namapuskesmas' => $namapuskesmas['nama_puskesmas'],
             'analisisrekomendasi' => $this->analisisRekomendasi->getAnalisisRekomendasi($id)
         ];
         return view('pages\detail\detail', $data);
