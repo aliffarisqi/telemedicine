@@ -29,25 +29,24 @@
                     <?php } ?>
                 </div>
             </div>
-            <div class="row mb-4">
+
+            <div class="row mb-2">
                 <div class="col">
                     <div class="row">
                         <div class="col">
-                            <form>
-                                <div class="row">
-                                    <div class="col-9">
-                                        <input class="form-control m-0" type="search" placeholder="Search">
+                            <form method="POST">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-primary-blue" type="submit" id="button-addon1"><i class="fas fa-search"></i></button>
                                     </div>
-                                    <div class="col-3">
-                                        <button class="btn btn-primary-blue" type="submit"><i class="fas fa-search"></i></button>
-                                    </div>
+                                    <input type="text" class="form-control" placeholder="cari obat ..." aria-label="Example text with button addon" aria-describedby="button-addon1" name="keyword">
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="col float left">
-                    <a href="" class="btn btn-warna-orange float-right" data-toggle="modal" data-target="#modalKirimPesan">Kirim Pesan</a>
+                    <a href="" class="btn btn-warna-orange float-right shadow" data-toggle="modal" data-target="#modalKirimPesan">Kirim Pesan <i class="fas fa-paper-plane"></i></a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -74,7 +73,7 @@
                                     <h4 class="text-primary"><i class="fas fa-check-square"></i></h4>
                                 </td>
                                 <td class="textCenter">
-                                    <a href="<?= base_url('/dashboard/detail/detailpasien/' . $lp['id_pasien']); ?>" class="btn mb-1 btn-primary-blue">Detail</a>
+                                    <a href="<?= base_url('/dashboard/detail/detailpasien/' . $lp['id_data_pasien']); ?>" class="btn mb-1 btn-primary-blue">Detail</a>
                                     <button class="btn mb-1 btn-danger">Hapus</button>
                                 </td>
                             </tr>

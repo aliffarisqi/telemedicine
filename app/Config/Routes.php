@@ -33,6 +33,25 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+//ROUTES API
+$routes->resource('Api/alergi/');
+$routes->resource('Api/alergi');
+$routes->resource('Api/analisisrekomendasi');
+$routes->resource('Api/datalifestyle');
+$routes->resource('Api/datapasien');
+$routes->resource('Api/konten');
+$routes->resource('Api/kuesioner');
+$routes->resource('Api/kuesionerpasien');
+$routes->resource('Api/lifestylepasien');
+$routes->resource('Api/pasien');
+$routes->resource('Api/pesan');
+$routes->resource('Api/riwayatkeluarga');
+$routes->resource('Api/riwayatobat');
+$routes->resource('Api/riwayatpenyakit');
+$routes->resource('Api/tekanandarah');
+
+
+//---------------------------------------------------------------------
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -39,7 +39,7 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
                 <p class="m-0 text-dark"><b>Nama : <?= $datapasien['nama']; ?></b></p>
             </div>
             <div class="row m-0">
-                <p class="m-0 text-dark">Usia :<?= $usia; ?></p>
+                <p class="m-0 text-dark">Usia : <?= $usia; ?></p>
             </div>
         </div>
         <div class="col-sm-3 pl-4 mb-2">
@@ -70,10 +70,17 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
                             <th scope="row" class="text-center"><?= $num++; ?></th>
                             <td><?= $p['tanggal']; ?></td>
                             <td><?= $p['jam']; ?></td>
-                            <td><?= $p['nyeri_tengkuk']; ?></td>
-                            <td>
-                                <?= $p['pusing']; ?>
-                            </td>
+
+                            <?php if ($p['nyeri_tengkuk'] == 1) {  ?>
+                                <td>Ya </td>
+                            <?php } else { ?>
+                                <td>Tidak </td>
+                            <?php } ?>
+                            <?php if ($p['pusing'] == 1) {  ?>
+                                <td>Ya </td>
+                            <?php } else { ?>
+                                <td>Tidak </td>
+                            <?php } ?>
                             <td><?= $p['sistole']; ?></td>
                             <td><?= $p['diastole']; ?></td>
                             <td><?= $p['note_td']; ?></td>
@@ -88,14 +95,6 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
                 <?php } ?>
             </tbody>
         </table>
-    </div>
-    <div class="row text-right m-2">
-        <div class="col">
-            <a href="" class="btn btn-light text-dark btn-outline-info">Juni</a>
-            <a href="" class="btn btn-info text-white">1</a>
-            <a href="" class="btn btn-light text-dark btn-outline-info">2</a>
-            <a href="" class="btn btn-light text-dark btn-outline-info">3</a>
-        </div>
     </div>
 
 </div>

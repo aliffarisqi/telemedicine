@@ -92,30 +92,23 @@
                                                             <td><?= $n['nama']; ?></td>
                                                             <!-- mengulang berdasarkan id pertanyaan -->
 
-                                                            <?php foreach ($join as $j) : ?>
-                                                                <?php $hasil = 0; ?>
+                                                            <?php $temval = 0;
+                                                            $hasil = 0;
+                                                            foreach ($join as $j) : ?>
                                                                 <?php if ($j['id_data_pasien'] == $n['id_data_pasien']) { ?>
                                                                     <td>
-                                                                        <?= $j['hasil']; ?>
-                                                                        <!-- <?php
-                                                                                if ($j['hasil'] == 1) {
-                                                                                    echo "Tidak Pernah";
-                                                                                } elseif ($j['hasil'] == 2) {
-                                                                                    echo "Jarang";
-                                                                                } elseif ($j['hasil'] == 3) {
-                                                                                    echo "kadang-kadang";
-                                                                                } elseif ($j['hasil'] == 3) {
-                                                                                    echo "Sering";
-                                                                                } else {
-                                                                                    echo "Selalu";
-                                                                                }
-                                                                                ?> -->
+                                                                        <?= $j['hasil'];
+                                                                        $temval++ ?>
                                                                     </td>
+                                                                    <?php $hasil = $hasil + $j['hasil']; ?>
+                                                                    <?php if ($temval == 5) { ?>
+                                                                        <td class=" text-white text-center <?= ($hasil == 25) ? 'bg-info' : 'bg-danger'; ?>"><b><?= $hasil; ?></b></td>
+                                                                    <?php } ?>
                                                                 <?php }  ?>
                                                                 <!-- menghitung hasil -->
-                                                                <?php $hasil = $hasil + $j['hasil']; ?>
+
                                                             <?php endforeach; ?>
-                                                            <td class=" text-white text-center <?= ($hasil == 25) ? 'bg-info' : 'bg-danger'; ?>"><b><?= $hasil; ?></b></td>
+
                                                         </tr>
                                                     <?php endforeach; ?>
                                                 <?php } else { ?>

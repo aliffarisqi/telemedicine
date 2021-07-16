@@ -1,21 +1,19 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
+
 <?php
-$tanggal = new DateTime($datapasien['tanggal_lahir']);
+if ($datapasien['tanggal_lahir'] == '0000-00-00') {
+    $usia = '-';
+} else {
+    $tanggal = new DateTime($datapasien['tanggal_lahir']);
+    $today = new DateTime('today');
+    $y = $today->diff($tanggal)->y;
+    $m = $today->diff($tanggal)->m;
+    $d = $today->diff($tanggal)->d;
+    $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
+}
 
-// tanggal hari ini
-$today = new DateTime('today');
-
-// tahun
-$y = $today->diff($tanggal)->y;
-
-// bulan
-$m = $today->diff($tanggal)->m;
-
-// hari
-$d = $today->diff($tanggal)->d;
-$usia = $y . " tahun " . $m . " bulan " . $d . " hari";
 ?>
 
 <div class="header-dashboard pt-4 pb-2 bg-white">
@@ -70,7 +68,7 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
                     <h4>Monitoring Pasien </h4>
                 </div>
                 <div class="col text-right">
-                    <a href="<?= base_url('/dashboard/hasil/hasiltekanandarah/' . $datapasien['id_pasien']); ?>" class="btn btn-light border-secondary text-dark">Hasil<i class="fa fa-table ml-2"></i></a>
+                    <a href="<?= base_url('/dashboard/hasil/hasiltekanandarah/' . $datapasien['id_data_pasien']); ?>" class="btn btn-light border-secondary text-dark">Hasil<i class="fa fa-table ml-2"></i></a>
                 </div>
             </div>
             <!-- card grafik -->
@@ -182,15 +180,55 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
                                 </tr>
                                 <tr>
                                     <td>Alergi</td>
-                                    <td>: -</td>
+                                    <td>
+                                        <?php if ($dataalergi) { ?> :
+                                            <?php foreach ($dataalergi as $da) : ?>
+                                                <?= $da['nama_alergi']; ?><br>:
+                                                <?php endforeach; ?>-
+                                            <?php } else { ?>
+                                                : -
+                                            <?php } ?>
+                                    </td>
+                                </tr>
+                                </td>
                                 </tr>
                                 <tr>
                                     <td>Riwayat Penyakit</td>
-                                    <td>: -</td>
+                                    <td>
+                                        <?php if ($datapenyakit) { ?> :
+                                            <?php foreach ($datapenyakit as $da) : ?>
+                                                <?= $da['nama_penyakit']; ?><br>:
+                                                <?php endforeach; ?>-
+                                            <?php } else { ?>
+                                                : -
+                                            <?php } ?>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Riwayat Pengobatan</td>
-                                    <td>: -</td>
+                                    <td>
+                                        <?php if ($riwayatobat) { ?> :
+                                            <?php foreach ($riwayatobat as $da) : ?>
+                                                <?= $da['nama_obat']; ?><br>:
+                                                <?php endforeach; ?>-
+                                            <?php } else { ?>
+                                                : -
+                                            <?php } ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Riwayat Keluarga</td>
+                                    <td>
+                                        <?php if ($riwayatkeluarga) { ?> :
+                                            <?php foreach ($riwayatkeluarga as $da) : ?>
+                                                <?= $da['nama_penyakit']; ?>
+                                                ,<?= $da['status_keluarga'] ?><br>:
+
+                                                <?php endforeach; ?>-
+                                            <?php } else { ?>
+                                                : -
+                                            <?php } ?>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Riwayat Diagnosa pengobatan</td>
@@ -262,6 +300,20 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
 <script src="/grafik/exporting.js"></script>
 <script src="/grafik/export-data.js"></script>
 <script src="/grafik/accessibility.js"></script>
+
+<?php
+$sistole = array();
+$diastole = array();
+$cekke = array();
+$temcek = 1;
+foreach ($datatekanandarah as $dt) {
+    $diastole[] = intval($dt['diastole']);
+    $sistole[] = intval($dt['sistole']);
+    $cekke[] = $temcek;
+    $temcek++;
+}
+?>
+
 <script>
     Highcharts.chart('grafik_tekanan_darah', {
 
@@ -280,7 +332,7 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
         },
 
         xAxis: {
-            categories: ['Minggu 1', 'Minggu 2', 'Minggu 3', 'Minggu 4']
+            categories: <?= json_encode($cekke); ?>
         },
 
         legend: {
@@ -291,10 +343,10 @@ $usia = $y . " tahun " . $m . " bulan " . $d . " hari";
 
         series: [{
             name: 'Sistolik',
-            data: [93, 95, 90, 95]
+            data: <?= json_encode($sistole); ?>
         }, {
             name: 'Diastolik',
-            data: [90, 97, 90, 94]
+            data: <?= json_encode($diastole); ?>
         }],
 
         responsive: {

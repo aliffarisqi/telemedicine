@@ -18,14 +18,14 @@ class Hasil extends BaseController
     }
     public function hasiltekanandarah($id)
     {
-        //var_dump($this->dataTekananDarah->getDataTekananDarah($id));
         session();
         date_default_timezone_set('Asia/Jakarta');
         $data = [
             'title' => 'Hasil tekanan Darah',
             'pasien' => $this->dataTekananDarah->getDataTekananDarah($id),
             'datapasien' => $this->dataPasien->getListPasien($id),
-            'hariini' => date('Y:m:d')
+            'hariini' => date('Y:m:d'),
+            'pager' => $this->dataTekananDarah->pager,
         ];
         return view('pages\detail\hasil', $data);
     }
